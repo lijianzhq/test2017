@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="scripts/knockout-3.4.2.js"></script>
+</head>
+<body>
+    <p>First value: <input data-bind="value: firstValue,event:{change:updateSecondValue}" /></p>          <!-- two-way binding -->
+    <p>Second value: <input data-bind="value: secondValue" /></p>        <!-- one-way binding -->
+    <p>Third value: <input data-bind="value: secondValue.length" /></p>  <!-- no binding -->
+    <input type="button" value="showSecondValue" onclick="(function showValue() { alert(viewModel.secondValue); })()" />
+    <script type="text/javascript">
+        var viewModel = {
+            firstValue: ko.observable("hello"), // Observable
+            secondValue: "hello, again",// Not observable
+            updateSecondValue: function () {
+                alert(this.secondValue);
+                this.secondValue = "hello";
+                alert(this.secondValue);
+            }
+        };
+        ko.applyBindings(viewModel);
+    </script>
+</body>
+</html>

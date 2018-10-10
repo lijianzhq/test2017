@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="t_student">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="username" Type="varchar" MaxLength="100"></Property>
+          <Property Name="loginname" Type="varchar" MaxLength="50" />
+          <Property Name="password" Type="varchar" MaxLength="100" />
+          <Property Name="sex" Type="char" MaxLength="1" />
+          <Property Name="birthday" Type="datetime" />
+        </EntityType>
+        <EntityContainer Name="TestModelStoreContainer">
+          <EntitySet Name="t_student" EntityType="Self.t_student" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="t_student">
+          <Documentation>
+            <Summary>aaaaa</Summary>
+          </Documentation>
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="username" Type="String" MaxLength="100" FixedLength="false" Unicode="false">
+            <Documentation>
+              <Summary>ddddd</Summary>
+            </Documentation>
+          </Property>
+          <Property Name="loginname" Type="String" MaxLength="50" FixedLength="false" Unicode="false"></Property>
+          <Property Name="password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="sex" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="birthday" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="TestEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="t_student" EntityType="Self.t_student" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TestModelStoreContainer" CdmEntityContainer="TestEntities">
+          <EntitySetMapping Name="t_student">
+            <EntityTypeMapping TypeName="TestModel.t_student">
+              <MappingFragment StoreEntitySet="t_student">
+                <ScalarProperty Name="birthday" ColumnName="birthday" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="loginname" ColumnName="loginname" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="sex" ColumnName="sex" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

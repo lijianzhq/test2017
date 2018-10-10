@@ -1,0 +1,66 @@
+﻿【公司项目使用】
+这个专用于oracle数据库模型生成，带上数据库comments作为字段注释的（只调通了EF5，EF6未调通），主要修改tt文件的以下部分：
+EF DBFirst  自动生成模型。
+
+步骤：
+（1）先通过vs工具生成了edmx文件
+（2）用自己 开发的一个工具（eftsqldocgenerato，vs2010开发的），抓取注释信息重写edmx文件（其实就是一个xml文件）
+（3）然后用以下的代码段替换tt文件对应的地方，重新保存执行tt文件，生成的类就包含了注释了 
+
+include的模板文件
+EF6：D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\Extensions\Microsoft\Entity Framework Tools\Templates\Includes
+EF5：D:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Microsoft\Entity Framework Tools\Templates\Includes
+
+//属性加上注释(修改方法)
+
+public static StringBuilder AddCharAtRowFirst(String text)
+{
+    var data = text.Split(new String[] { Environment.NewLine,"\n" }, StringSplitOptions.RemoveEmptyEntries);
+    var sb = new StringBuilder();
+    foreach (var item in data)
+    {
+        sb.AppendLine();
+        sb.AppendFormat("///{0}",item);
+    }
+    sb.AppendLine();
+    return sb;
+}
+
+public string Property(EdmProperty edmProperty)
+{
+	String summaryText = @"{0}/// <summary>{1}/// </summary>";
+	summaryText = String.Format(summaryText, Environment.NewLine,AddCharAtRowFirst(edmProperty.Documentation == null ? edmProperty.Name : edmProperty.Documentation.Summary));		
+	return string.Format(
+		CultureInfo.InvariantCulture,
+		"{0}{1}{2} {3} {4} {{ {5}get; {6}set; }}",
+		summaryText,
+		Environment.NewLine,
+		Accessibility.ForProperty(edmProperty),
+		_typeMapper.GetTypeName(edmProperty.TypeUsage,false),
+		_code.Escape(edmProperty),
+		_code.SpaceAfter(Accessibility.ForGetter(edmProperty)),
+		_code.SpaceAfter(Accessibility.ForSetter(edmProperty)));
+}
+
+
+//类加上注释(修改方法)
+public string EntityClassOpening(EntityType entity)
+{
+	String summaryText = @"{0}/// <summary>{1}/// </summary>";
+	summaryText = String.Format(summaryText,Environment.NewLine,AddCharAtRowFirst(entity.Documentation == null ? entity.Name : entity.Documentation.Summary));		
+	return string.Format(
+		CultureInfo.InvariantCulture,
+		"{0}{1}{2} {3}partial class {4}{5}",
+		summaryText,
+		Environment.NewLine,
+		Accessibility.ForType(entity),
+		_code.SpaceAfter(_code.AbstractOption(entity)),
+		_code.Escape(entity),
+		_code.StringBefore(" : ", _typeMapper.GetTypeName(entity.BaseType)));
+}
+
+//类加上注释(TypeMapper类增加方法)
+public string GetTypeName(TypeUsage typeUsage, bool? isNullable)
+{
+    return typeUsage == null ? null : GetTypeName(typeUsage.EdmType, isNullable, modelNamespace: null);
+}

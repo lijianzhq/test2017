@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="../jquery-easyui-1.5.5.2/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../jquery-easyui-1.5.5.2/themes/icon.css">
+    <script type="text/javascript" src="../jquery-easyui-1.5.5.2/jquery.min.js"></script>
+    <script type="text/javascript" src="../jquery-easyui-1.5.5.2/jquery.easyui.min.js"></script>
+    <style type="text/css">
+
+    </style>
+    <title>测试easyui</title>
+</head>
+
+<body>
+
+    <input id="cc" style="width:200px" />
+
+    <script type="text/javascript">
+        $('#cc').combobox({
+            url: 'test1.data.json',
+            valueField: 'id',
+            textField: 'text',
+            method: 'get',
+            onLoadSuccess: function () {
+                //alert("success");
+            },
+            onLoadError: function () {
+                alert('error');
+            }
+        });
+    </script>
+</body>
+
+</html>

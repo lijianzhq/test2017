@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../boostrap/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+    <title>windows-test2</title>
+</head>
+
+<body>
+    <div class="container">
+        <div type="button" class="btn btn-primary" data-toggle="modal" data-target="#test_modal">
+            Launch demo modal
+        </div>
+    </div>
+
+    <div class="modal fade" id="test_modal" tabindex="-1" role="dialog" aria-labelledby="test_modal_title">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span>x</span>
+                    </button>
+                    <h4 class="modal-title" id="test_modal_title">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    <h4>Text in a modal</h4>
+                    <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+                    <h4>Popover in a modal</h4>
+                    <p>
+                        This
+                        <a href="#" role="button" class="btn btn-default" data-toggle="popover" data-content="And here's some amazing content. It's very engaging. right?"
+                            data-original-title="A title">button</a>
+                        should trigger a popover on click.
+                    </p>
+                    <p>
+                        Tooltips in a modal 
+                        <a href="#" data-toggle="tooltip" data-title="this link">This link</a> and 
+                        <a href="#" data-toggle="tooltip" data-title="that link">that link</a> should have tooltips on hover.
+                    </p>
+                </div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../boostrap/jquery-3.3.1.min.js"></script>
+    <script src="../../boostrap/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //方法一：绑定事件
+            /* $("#btn_showPopo").click(function () {
+                $(this).popover('toggle');
+            }); */
+            //方法二：初始化
+            $(function () {
+                $('[data-toggle="popover"]').popover()
+                $('[data-toggle="tooltip"]').tooltip()
+            })
+        });
+    </script>
+</body>
+
+</html>

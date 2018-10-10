@@ -1,0 +1,874 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xdr:wsDr xmlns:xdr="http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing" xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">
+  <xdr:twoCellAnchor>
+    <xdr:from>
+      <xdr:col>1</xdr:col>
+      <xdr:colOff>95250</xdr:colOff>
+      <xdr:row>1</xdr:row>
+      <xdr:rowOff>0</xdr:rowOff>
+    </xdr:from>
+    <xdr:to>
+      <xdr:col>39</xdr:col>
+      <xdr:colOff>0</xdr:colOff>
+      <xdr:row>33</xdr:row>
+      <xdr:rowOff>57150</xdr:rowOff>
+    </xdr:to>
+    <xdr:graphicFrame macro="">
+      <xdr:nvGraphicFramePr>
+        <xdr:cNvPr id="87054" name="图表 1"/>
+        <xdr:cNvGraphicFramePr>
+          <a:graphicFrameLocks/>
+        </xdr:cNvGraphicFramePr>
+      </xdr:nvGraphicFramePr>
+      <xdr:xfrm>
+        <a:off x="0" y="0"/>
+        <a:ext cx="0" cy="0"/>
+      </xdr:xfrm>
+      <a:graphic>
+        <a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/chart">
+          <c:chart xmlns:c="http://schemas.openxmlformats.org/drawingml/2006/chart" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" r:id="rId1"/>
+        </a:graphicData>
+      </a:graphic>
+    </xdr:graphicFrame>
+    <xdr:clientData/>
+  </xdr:twoCellAnchor>
+  <xdr:twoCellAnchor>
+    <xdr:from>
+      <xdr:col>0</xdr:col>
+      <xdr:colOff>9525</xdr:colOff>
+      <xdr:row>33</xdr:row>
+      <xdr:rowOff>9525</xdr:rowOff>
+    </xdr:from>
+    <xdr:to>
+      <xdr:col>2</xdr:col>
+      <xdr:colOff>0</xdr:colOff>
+      <xdr:row>34</xdr:row>
+      <xdr:rowOff>0</xdr:rowOff>
+    </xdr:to>
+    <xdr:sp macro="" textlink="">
+      <xdr:nvSpPr>
+        <xdr:cNvPr id="87055" name="Line 2"/>
+        <xdr:cNvSpPr>
+          <a:spLocks noChangeShapeType="1"/>
+        </xdr:cNvSpPr>
+      </xdr:nvSpPr>
+      <xdr:spPr bwMode="auto">
+        <a:xfrm>
+          <a:off x="9525" y="11049000"/>
+          <a:ext cx="609600" cy="704850"/>
+        </a:xfrm>
+        <a:prstGeom prst="line">
+          <a:avLst/>
+        </a:prstGeom>
+        <a:noFill/>
+        <a:ln w="9525">
+          <a:solidFill>
+            <a:srgbClr val="000000" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="a14" xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main" a14:legacySpreadsheetColorIndex="64"/>
+          </a:solidFill>
+          <a:round/>
+          <a:headEnd/>
+          <a:tailEnd/>
+        </a:ln>
+        <a:extLst>
+          <a:ext uri="{909E8E84-426E-40DD-AFC4-6F175D3DCCD1}">
+            <a14:hiddenFill xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main">
+              <a:noFill/>
+            </a14:hiddenFill>
+          </a:ext>
+        </a:extLst>
+      </xdr:spPr>
+    </xdr:sp>
+    <xdr:clientData/>
+  </xdr:twoCellAnchor>
+  <xdr:twoCellAnchor>
+    <xdr:from>
+      <xdr:col>0</xdr:col>
+      <xdr:colOff>0</xdr:colOff>
+      <xdr:row>14</xdr:row>
+      <xdr:rowOff>314325</xdr:rowOff>
+    </xdr:from>
+    <xdr:to>
+      <xdr:col>1</xdr:col>
+      <xdr:colOff>152400</xdr:colOff>
+      <xdr:row>19</xdr:row>
+      <xdr:rowOff>190500</xdr:rowOff>
+    </xdr:to>
+    <xdr:sp macro="" textlink="">
+      <xdr:nvSpPr>
+        <xdr:cNvPr id="2" name="Text Box 3"/>
+        <xdr:cNvSpPr txBox="1">
+          <a:spLocks noChangeArrowheads="1"/>
+        </xdr:cNvSpPr>
+      </xdr:nvSpPr>
+      <xdr:spPr>
+        <a:xfrm>
+          <a:off x="0" y="5200650"/>
+          <a:ext cx="409575" cy="1495425"/>
+        </a:xfrm>
+        <a:prstGeom prst="rect">
+          <a:avLst/>
+        </a:prstGeom>
+        <a:noFill/>
+        <a:ln>
+          <a:noFill/>
+        </a:ln>
+        <a:extLst>
+          <a:ext uri="{909E8E84-426E-40DD-AFC4-6F175D3DCCD1}">
+            <a14:hiddenFill xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main">
+              <a:solidFill>
+                <a:srgbClr val="FFFFFF"/>
+              </a:solidFill>
+            </a14:hiddenFill>
+          </a:ext>
+          <a:ext uri="{91240B29-F687-4F45-9708-019B960494DF}">
+            <a14:hiddenLine xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main" w="9525">
+              <a:solidFill>
+                <a:srgbClr val="000000"/>
+              </a:solidFill>
+              <a:miter lim="800000"/>
+              <a:headEnd/>
+              <a:tailEnd/>
+            </a14:hiddenLine>
+          </a:ext>
+        </a:extLst>
+      </xdr:spPr>
+      <xdr:txBody>
+        <a:bodyPr vertOverflow="clip" vert="wordArtVertRtl" wrap="square" lIns="27432" tIns="0" rIns="0" bIns="0" anchor="b" upright="1"/>
+        <a:lstStyle/>
+        <a:p>
+          <a:pPr algn="l" rtl="0">
+            <a:defRPr sz="1000"/>
+          </a:pPr>
+          <a:r>
+            <a:rPr lang="zh-CN" altLang="en-US" sz="1200" b="0" i="0" u="none" strike="noStrike" baseline="0">
+              <a:solidFill>
+                <a:srgbClr val="000000"/>
+              </a:solidFill>
+              <a:latin typeface="宋体"/>
+              <a:ea typeface="宋体"/>
+            </a:rPr>
+            <a:t>不良件数</a:t>
+          </a:r>
+          <a:r>
+            <a:rPr lang="zh-CN" altLang="en-US" sz="1200" b="0" i="0" u="none" strike="noStrike" baseline="0">
+              <a:solidFill>
+                <a:srgbClr val="000000"/>
+              </a:solidFill>
+              <a:latin typeface="Times New Roman" pitchFamily="12"/>
+              <a:cs typeface="Times New Roman" pitchFamily="12"/>
+            </a:rPr>
+            <a:t> </a:t>
+          </a:r>
+        </a:p>
+      </xdr:txBody>
+    </xdr:sp>
+    <xdr:clientData/>
+  </xdr:twoCellAnchor>
+  <xdr:twoCellAnchor>
+    <xdr:from>
+      <xdr:col>0</xdr:col>
+      <xdr:colOff>257175</xdr:colOff>
+      <xdr:row>48</xdr:row>
+      <xdr:rowOff>0</xdr:rowOff>
+    </xdr:from>
+    <xdr:to>
+      <xdr:col>38</xdr:col>
+      <xdr:colOff>0</xdr:colOff>
+      <xdr:row>48</xdr:row>
+      <xdr:rowOff>9525</xdr:rowOff>
+    </xdr:to>
+    <xdr:graphicFrame macro="">
+      <xdr:nvGraphicFramePr>
+        <xdr:cNvPr id="87057" name="图表 4"/>
+        <xdr:cNvGraphicFramePr>
+          <a:graphicFrameLocks/>
+        </xdr:cNvGraphicFramePr>
+      </xdr:nvGraphicFramePr>
+      <xdr:xfrm>
+        <a:off x="0" y="0"/>
+        <a:ext cx="0" cy="0"/>
+      </xdr:xfrm>
+      <a:graphic>
+        <a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/chart">
+          <c:chart xmlns:c="http://schemas.openxmlformats.org/drawingml/2006/chart" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" r:id="rId2"/>
+        </a:graphicData>
+      </a:graphic>
+    </xdr:graphicFrame>
+    <xdr:clientData/>
+  </xdr:twoCellAnchor>
+  <xdr:twoCellAnchor>
+    <xdr:from>
+      <xdr:col>0</xdr:col>
+      <xdr:colOff>9525</xdr:colOff>
+      <xdr:row>48</xdr:row>
+      <xdr:rowOff>0</xdr:rowOff>
+    </xdr:from>
+    <xdr:to>
+      <xdr:col>2</xdr:col>
+      <xdr:colOff>0</xdr:colOff>
+      <xdr:row>48</xdr:row>
+      <xdr:rowOff>0</xdr:rowOff>
+    </xdr:to>
+    <xdr:sp macro="" textlink="">
+      <xdr:nvSpPr>
+        <xdr:cNvPr id="87058" name="Line 5"/>
+        <xdr:cNvSpPr>
+          <a:spLocks noChangeShapeType="1"/>
+        </xdr:cNvSpPr>
+      </xdr:nvSpPr>
+      <xdr:spPr bwMode="auto">
+        <a:xfrm>
+          <a:off x="9525" y="16706850"/>
+          <a:ext cx="609600" cy="0"/>
+        </a:xfrm>
+        <a:prstGeom prst="line">
+          <a:avLst/>
+        </a:prstGeom>
+        <a:noFill/>
+        <a:ln w="9525">
+          <a:solidFill>
+            <a:srgbClr val="000000" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="a14" xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main" a14:legacySpreadsheetColorIndex="64"/>
+          </a:solidFill>
+          <a:round/>
+          <a:headEnd/>
+          <a:tailEnd/>
+        </a:ln>
+        <a:extLst>
+          <a:ext uri="{909E8E84-426E-40DD-AFC4-6F175D3DCCD1}">
+            <a14:hiddenFill xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main">
+              <a:noFill/>
+            </a14:hiddenFill>
+          </a:ext>
+        </a:extLst>
+      </xdr:spPr>
+    </xdr:sp>
+    <xdr:clientData/>
+  </xdr:twoCellAnchor>
+  <xdr:twoCellAnchor>
+    <xdr:from>
+      <xdr:col>1</xdr:col>
+      <xdr:colOff>0</xdr:colOff>
+      <xdr:row>48</xdr:row>
+      <xdr:rowOff>0</xdr:rowOff>
+    </xdr:from>
+    <xdr:to>
+      <xdr:col>1</xdr:col>
+      <xdr:colOff>133350</xdr:colOff>
+      <xdr:row>48</xdr:row>
+      <xdr:rowOff>0</xdr:rowOff>
+    </xdr:to>
+    <xdr:sp macro="" textlink="">
+      <xdr:nvSpPr>
+        <xdr:cNvPr id="3" name="Text Box 6"/>
+        <xdr:cNvSpPr txBox="1">
+          <a:spLocks noChangeArrowheads="1"/>
+        </xdr:cNvSpPr>
+      </xdr:nvSpPr>
+      <xdr:spPr>
+        <a:xfrm>
+          <a:off x="257175" y="16706850"/>
+          <a:ext cx="133350" cy="0"/>
+        </a:xfrm>
+        <a:prstGeom prst="rect">
+          <a:avLst/>
+        </a:prstGeom>
+        <a:noFill/>
+        <a:ln>
+          <a:noFill/>
+        </a:ln>
+        <a:extLst>
+          <a:ext uri="{909E8E84-426E-40DD-AFC4-6F175D3DCCD1}">
+            <a14:hiddenFill xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main">
+              <a:solidFill>
+                <a:srgbClr val="FFFFFF"/>
+              </a:solidFill>
+            </a14:hiddenFill>
+          </a:ext>
+          <a:ext uri="{91240B29-F687-4F45-9708-019B960494DF}">
+            <a14:hiddenLine xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main" w="9525">
+              <a:solidFill>
+                <a:srgbClr val="000000"/>
+              </a:solidFill>
+              <a:miter lim="800000"/>
+              <a:headEnd/>
+              <a:tailEnd/>
+            </a14:hiddenLine>
+          </a:ext>
+        </a:extLst>
+      </xdr:spPr>
+      <xdr:txBody>
+        <a:bodyPr vertOverflow="clip" vert="wordArtVertRtl" wrap="square" lIns="36576" tIns="0" rIns="0" bIns="0" anchor="b" upright="1"/>
+        <a:lstStyle/>
+        <a:p>
+          <a:pPr algn="l" rtl="0">
+            <a:defRPr sz="1000"/>
+          </a:pPr>
+          <a:r>
+            <a:rPr lang="zh-CN" altLang="en-US" sz="1600" b="0" i="0" u="none" strike="noStrike" baseline="0">
+              <a:solidFill>
+                <a:srgbClr val="000000"/>
+              </a:solidFill>
+              <a:latin typeface="宋体"/>
+              <a:ea typeface="宋体"/>
+            </a:rPr>
+            <a:t>不良件数</a:t>
+          </a:r>
+          <a:r>
+            <a:rPr lang="zh-CN" altLang="en-US" sz="1200" b="0" i="0" u="none" strike="noStrike" baseline="0">
+              <a:solidFill>
+                <a:srgbClr val="000000"/>
+              </a:solidFill>
+              <a:latin typeface="Times New Roman" pitchFamily="12"/>
+              <a:cs typeface="Times New Roman" pitchFamily="12"/>
+            </a:rPr>
+            <a:t> </a:t>
+          </a:r>
+        </a:p>
+      </xdr:txBody>
+    </xdr:sp>
+    <xdr:clientData/>
+  </xdr:twoCellAnchor>
+  <xdr:twoCellAnchor>
+    <xdr:from>
+      <xdr:col>38</xdr:col>
+      <xdr:colOff>0</xdr:colOff>
+      <xdr:row>67</xdr:row>
+      <xdr:rowOff>66675</xdr:rowOff>
+    </xdr:from>
+    <xdr:to>
+      <xdr:col>40</xdr:col>
+      <xdr:colOff>152400</xdr:colOff>
+      <xdr:row>72</xdr:row>
+      <xdr:rowOff>85725</xdr:rowOff>
+    </xdr:to>
+    <xdr:sp macro="" textlink="">
+      <xdr:nvSpPr>
+        <xdr:cNvPr id="87060" name="Rectangle 46"/>
+        <xdr:cNvSpPr>
+          <a:spLocks noChangeArrowheads="1"/>
+        </xdr:cNvSpPr>
+      </xdr:nvSpPr>
+      <xdr:spPr bwMode="auto">
+        <a:xfrm>
+          <a:off x="21421725" y="20574000"/>
+          <a:ext cx="1524000" cy="923925"/>
+        </a:xfrm>
+        <a:prstGeom prst="rect">
+          <a:avLst/>
+        </a:prstGeom>
+        <a:solidFill>
+          <a:srgbClr val="FFFFFF" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="a14" xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main" a14:legacySpreadsheetColorIndex="65"/>
+        </a:solidFill>
+        <a:ln w="9525">
+          <a:solidFill>
+            <a:srgbClr val="000000" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="a14" xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main" a14:legacySpreadsheetColorIndex="64"/>
+          </a:solidFill>
+          <a:miter lim="800000"/>
+          <a:headEnd/>
+          <a:tailEnd/>
+        </a:ln>
+      </xdr:spPr>
+    </xdr:sp>
+    <xdr:clientData/>
+  </xdr:twoCellAnchor>
+  <xdr:twoCellAnchor>
+    <xdr:from>
+      <xdr:col>0</xdr:col>
+      <xdr:colOff>123825</xdr:colOff>
+      <xdr:row>32</xdr:row>
+      <xdr:rowOff>314325</xdr:rowOff>
+    </xdr:from>
+    <xdr:to>
+      <xdr:col>2</xdr:col>
+      <xdr:colOff>0</xdr:colOff>
+      <xdr:row>33</xdr:row>
+      <xdr:rowOff>200025</xdr:rowOff>
+    </xdr:to>
+    <xdr:sp macro="" textlink="">
+      <xdr:nvSpPr>
+        <xdr:cNvPr id="4" name="Text Box 49"/>
+        <xdr:cNvSpPr txBox="1">
+          <a:spLocks noChangeArrowheads="1"/>
+        </xdr:cNvSpPr>
+      </xdr:nvSpPr>
+      <xdr:spPr>
+        <a:xfrm>
+          <a:off x="123825" y="11029950"/>
+          <a:ext cx="495300" cy="209550"/>
+        </a:xfrm>
+        <a:prstGeom prst="rect">
+          <a:avLst/>
+        </a:prstGeom>
+        <a:noFill/>
+        <a:ln>
+          <a:noFill/>
+        </a:ln>
+        <a:extLst>
+          <a:ext uri="{909E8E84-426E-40DD-AFC4-6F175D3DCCD1}">
+            <a14:hiddenFill xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main">
+              <a:solidFill>
+                <a:srgbClr val="FFFFFF" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="a14" a14:legacySpreadsheetColorIndex="65"/>
+              </a:solidFill>
+            </a14:hiddenFill>
+          </a:ext>
+          <a:ext uri="{91240B29-F687-4F45-9708-019B960494DF}">
+            <a14:hiddenLine xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main" w="9525">
+              <a:solidFill>
+                <a:srgbClr val="000000" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="a14" a14:legacySpreadsheetColorIndex="64"/>
+              </a:solidFill>
+              <a:miter lim="800000"/>
+              <a:headEnd/>
+              <a:tailEnd/>
+            </a14:hiddenLine>
+          </a:ext>
+        </a:extLst>
+      </xdr:spPr>
+      <xdr:txBody>
+        <a:bodyPr vertOverflow="clip" wrap="square" lIns="27432" tIns="18288" rIns="0" bIns="0" anchor="t" upright="1"/>
+        <a:lstStyle/>
+        <a:p>
+          <a:pPr algn="l" rtl="0">
+            <a:defRPr sz="1000"/>
+          </a:pPr>
+          <a:r>
+            <a:rPr lang="zh-CN" altLang="en-US" sz="1200" b="0" i="0" u="none" strike="noStrike" baseline="0">
+              <a:solidFill>
+                <a:srgbClr val="000000"/>
+              </a:solidFill>
+              <a:latin typeface="宋体"/>
+              <a:ea typeface="宋体"/>
+            </a:rPr>
+            <a:t>姓名</a:t>
+          </a:r>
+        </a:p>
+      </xdr:txBody>
+    </xdr:sp>
+    <xdr:clientData/>
+  </xdr:twoCellAnchor>
+  <xdr:twoCellAnchor>
+    <xdr:from>
+      <xdr:col>0</xdr:col>
+      <xdr:colOff>9525</xdr:colOff>
+      <xdr:row>33</xdr:row>
+      <xdr:rowOff>342900</xdr:rowOff>
+    </xdr:from>
+    <xdr:to>
+      <xdr:col>1</xdr:col>
+      <xdr:colOff>219075</xdr:colOff>
+      <xdr:row>33</xdr:row>
+      <xdr:rowOff>561975</xdr:rowOff>
+    </xdr:to>
+    <xdr:sp macro="" textlink="">
+      <xdr:nvSpPr>
+        <xdr:cNvPr id="5" name="Text Box 50"/>
+        <xdr:cNvSpPr txBox="1">
+          <a:spLocks noChangeArrowheads="1"/>
+        </xdr:cNvSpPr>
+      </xdr:nvSpPr>
+      <xdr:spPr>
+        <a:xfrm>
+          <a:off x="9525" y="11382375"/>
+          <a:ext cx="466725" cy="219075"/>
+        </a:xfrm>
+        <a:prstGeom prst="rect">
+          <a:avLst/>
+        </a:prstGeom>
+        <a:noFill/>
+        <a:ln>
+          <a:noFill/>
+        </a:ln>
+        <a:extLst>
+          <a:ext uri="{909E8E84-426E-40DD-AFC4-6F175D3DCCD1}">
+            <a14:hiddenFill xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main">
+              <a:solidFill>
+                <a:srgbClr val="FFFFFF" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="a14" a14:legacySpreadsheetColorIndex="65"/>
+              </a:solidFill>
+            </a14:hiddenFill>
+          </a:ext>
+          <a:ext uri="{91240B29-F687-4F45-9708-019B960494DF}">
+            <a14:hiddenLine xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main" w="9525">
+              <a:solidFill>
+                <a:srgbClr val="000000" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="a14" a14:legacySpreadsheetColorIndex="64"/>
+              </a:solidFill>
+              <a:miter lim="800000"/>
+              <a:headEnd/>
+              <a:tailEnd/>
+            </a14:hiddenLine>
+          </a:ext>
+        </a:extLst>
+      </xdr:spPr>
+      <xdr:txBody>
+        <a:bodyPr vertOverflow="clip" wrap="square" lIns="27432" tIns="18288" rIns="0" bIns="0" anchor="t" upright="1"/>
+        <a:lstStyle/>
+        <a:p>
+          <a:pPr algn="l" rtl="0">
+            <a:defRPr sz="1000"/>
+          </a:pPr>
+          <a:r>
+            <a:rPr lang="zh-CN" altLang="en-US" sz="1200" b="0" i="0" u="none" strike="noStrike" baseline="0">
+              <a:solidFill>
+                <a:srgbClr val="000000"/>
+              </a:solidFill>
+              <a:latin typeface="宋体"/>
+              <a:ea typeface="宋体"/>
+            </a:rPr>
+            <a:t>月份</a:t>
+          </a:r>
+        </a:p>
+      </xdr:txBody>
+    </xdr:sp>
+    <xdr:clientData/>
+  </xdr:twoCellAnchor>
+  <xdr:twoCellAnchor editAs="oneCell">
+    <xdr:from>
+      <xdr:col>35</xdr:col>
+      <xdr:colOff>419100</xdr:colOff>
+      <xdr:row>0</xdr:row>
+      <xdr:rowOff>47625</xdr:rowOff>
+    </xdr:from>
+    <xdr:to>
+      <xdr:col>38</xdr:col>
+      <xdr:colOff>666750</xdr:colOff>
+      <xdr:row>0</xdr:row>
+      <xdr:rowOff>657225</xdr:rowOff>
+    </xdr:to>
+    <xdr:pic>
+      <xdr:nvPicPr>
+        <xdr:cNvPr id="87063" name="图片 12"/>
+        <xdr:cNvPicPr>
+          <a:picLocks noChangeAspect="1" noChangeArrowheads="1"/>
+        </xdr:cNvPicPr>
+      </xdr:nvPicPr>
+      <xdr:blipFill>
+        <a:blip xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" r:embed="rId3">
+          <a:extLst>
+            <a:ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
+              <a14:useLocalDpi xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main" val="0"/>
+            </a:ext>
+          </a:extLst>
+        </a:blip>
+        <a:srcRect/>
+        <a:stretch>
+          <a:fillRect/>
+        </a:stretch>
+      </xdr:blipFill>
+      <xdr:spPr bwMode="auto">
+        <a:xfrm>
+          <a:off x="20212050" y="47625"/>
+          <a:ext cx="1876425" cy="609600"/>
+        </a:xfrm>
+        <a:prstGeom prst="rect">
+          <a:avLst/>
+        </a:prstGeom>
+        <a:noFill/>
+        <a:ln>
+          <a:noFill/>
+        </a:ln>
+        <a:extLst>
+          <a:ext uri="{909E8E84-426E-40DD-AFC4-6F175D3DCCD1}">
+            <a14:hiddenFill xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main">
+              <a:solidFill>
+                <a:srgbClr val="FFFFFF"/>
+              </a:solidFill>
+            </a14:hiddenFill>
+          </a:ext>
+          <a:ext uri="{91240B29-F687-4F45-9708-019B960494DF}">
+            <a14:hiddenLine xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main" w="9525">
+              <a:solidFill>
+                <a:srgbClr val="000000"/>
+              </a:solidFill>
+              <a:miter lim="800000"/>
+              <a:headEnd/>
+              <a:tailEnd/>
+            </a14:hiddenLine>
+          </a:ext>
+        </a:extLst>
+      </xdr:spPr>
+    </xdr:pic>
+    <xdr:clientData/>
+  </xdr:twoCellAnchor>
+  <xdr:twoCellAnchor editAs="oneCell">
+    <xdr:from>
+      <xdr:col>0</xdr:col>
+      <xdr:colOff>38100</xdr:colOff>
+      <xdr:row>0</xdr:row>
+      <xdr:rowOff>47625</xdr:rowOff>
+    </xdr:from>
+    <xdr:to>
+      <xdr:col>2</xdr:col>
+      <xdr:colOff>114300</xdr:colOff>
+      <xdr:row>0</xdr:row>
+      <xdr:rowOff>638175</xdr:rowOff>
+    </xdr:to>
+    <xdr:pic>
+      <xdr:nvPicPr>
+        <xdr:cNvPr id="87064" name="Picture 6" descr="C:\Users\N806171\AppData\Local\Microsoft\Windows\Temporary Internet Files\Content.Outlook\0T35QVIO\apw_logo_l.jpg"/>
+        <xdr:cNvPicPr>
+          <a:picLocks noChangeAspect="1" noChangeArrowheads="1"/>
+        </xdr:cNvPicPr>
+      </xdr:nvPicPr>
+      <xdr:blipFill>
+        <a:blip xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" r:embed="rId4" cstate="print">
+          <a:extLst>
+            <a:ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
+              <a14:useLocalDpi xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main" val="0"/>
+            </a:ext>
+          </a:extLst>
+        </a:blip>
+        <a:srcRect/>
+        <a:stretch>
+          <a:fillRect/>
+        </a:stretch>
+      </xdr:blipFill>
+      <xdr:spPr bwMode="auto">
+        <a:xfrm>
+          <a:off x="38100" y="47625"/>
+          <a:ext cx="695325" cy="590550"/>
+        </a:xfrm>
+        <a:prstGeom prst="rect">
+          <a:avLst/>
+        </a:prstGeom>
+        <a:noFill/>
+        <a:ln>
+          <a:noFill/>
+        </a:ln>
+        <a:extLst>
+          <a:ext uri="{909E8E84-426E-40DD-AFC4-6F175D3DCCD1}">
+            <a14:hiddenFill xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main">
+              <a:solidFill>
+                <a:srgbClr val="FFFFFF"/>
+              </a:solidFill>
+            </a14:hiddenFill>
+          </a:ext>
+          <a:ext uri="{91240B29-F687-4F45-9708-019B960494DF}">
+            <a14:hiddenLine xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main" w="9525">
+              <a:solidFill>
+                <a:srgbClr val="000000"/>
+              </a:solidFill>
+              <a:miter lim="800000"/>
+              <a:headEnd/>
+              <a:tailEnd/>
+            </a14:hiddenLine>
+          </a:ext>
+        </a:extLst>
+      </xdr:spPr>
+    </xdr:pic>
+    <xdr:clientData/>
+  </xdr:twoCellAnchor>
+  <xdr:twoCellAnchor>
+    <xdr:from>
+      <xdr:col>10</xdr:col>
+      <xdr:colOff>51955</xdr:colOff>
+      <xdr:row>16</xdr:row>
+      <xdr:rowOff>69272</xdr:rowOff>
+    </xdr:from>
+    <xdr:to>
+      <xdr:col>30</xdr:col>
+      <xdr:colOff>133597</xdr:colOff>
+      <xdr:row>20</xdr:row>
+      <xdr:rowOff>323850</xdr:rowOff>
+    </xdr:to>
+    <xdr:sp macro="" textlink="">
+      <xdr:nvSpPr>
+        <xdr:cNvPr id="6" name="Rectangle 18"/>
+        <xdr:cNvSpPr>
+          <a:spLocks noChangeArrowheads="1"/>
+        </xdr:cNvSpPr>
+      </xdr:nvSpPr>
+      <xdr:spPr>
+        <a:xfrm>
+          <a:off x="5318760" y="5603240"/>
+          <a:ext cx="11702415" cy="1550035"/>
+        </a:xfrm>
+        <a:prstGeom prst="rect">
+          <a:avLst/>
+        </a:prstGeom>
+        <a:solidFill>
+          <a:srgbClr val="FFFF00"/>
+        </a:solidFill>
+        <a:ln w="25400" algn="ctr">
+          <a:solidFill>
+            <a:srgbClr val="FF0000"/>
+          </a:solidFill>
+          <a:prstDash val="sysDot"/>
+          <a:miter lim="800000"/>
+        </a:ln>
+      </xdr:spPr>
+      <xdr:txBody>
+        <a:bodyPr vertOverflow="clip" wrap="square" lIns="72000" tIns="72000" rIns="72000" bIns="0" spcCol="288000" anchor="ctr" anchorCtr="1" upright="1"/>
+        <a:lstStyle/>
+        <a:p>
+          <a:pPr algn="l" rtl="0">
+            <a:lnSpc>
+              <a:spcPts val="1600"/>
+            </a:lnSpc>
+            <a:defRPr sz="1000"/>
+          </a:pPr>
+          <a:r>
+            <a:rPr lang="zh-CN" altLang="en-US" sz="2400" b="0" i="0" u="none" strike="noStrike" baseline="0">
+              <a:solidFill>
+                <a:srgbClr val="000000"/>
+              </a:solidFill>
+              <a:latin typeface="华文中宋"/>
+              <a:ea typeface="华文中宋"/>
+            </a:rPr>
+            <a:t>此表单人员包括除班长以外的所有人员，每月初（</a:t>
+          </a:r>
+          <a:r>
+            <a:rPr lang="en-US" altLang="zh-CN" sz="2400" b="0" i="0" u="none" strike="noStrike" baseline="0">
+              <a:solidFill>
+                <a:srgbClr val="000000"/>
+              </a:solidFill>
+              <a:latin typeface="华文中宋"/>
+              <a:ea typeface="华文中宋"/>
+            </a:rPr>
+            <a:t>5</a:t>
+          </a:r>
+          <a:r>
+            <a:rPr lang="zh-CN" altLang="en-US" sz="2400" b="0" i="0" u="none" strike="noStrike" baseline="0">
+              <a:solidFill>
+                <a:srgbClr val="000000"/>
+              </a:solidFill>
+              <a:latin typeface="华文中宋"/>
+              <a:ea typeface="华文中宋"/>
+            </a:rPr>
+            <a:t>日前）对上月个人不良进行统计并</a:t>
+          </a:r>
+          <a:endParaRPr lang="en-US" altLang="zh-CN" sz="2400" b="0" i="0" u="none" strike="noStrike" baseline="0">
+            <a:solidFill>
+              <a:srgbClr val="000000"/>
+            </a:solidFill>
+            <a:latin typeface="华文中宋"/>
+            <a:ea typeface="华文中宋"/>
+          </a:endParaRPr>
+        </a:p>
+        <a:p>
+          <a:pPr algn="l" rtl="0">
+            <a:lnSpc>
+              <a:spcPts val="1600"/>
+            </a:lnSpc>
+            <a:defRPr sz="1000"/>
+          </a:pPr>
+          <a:endParaRPr lang="en-US" altLang="zh-CN" sz="2400" b="0" i="0" u="none" strike="noStrike" baseline="0">
+            <a:solidFill>
+              <a:srgbClr val="000000"/>
+            </a:solidFill>
+            <a:latin typeface="华文中宋"/>
+            <a:ea typeface="华文中宋"/>
+          </a:endParaRPr>
+        </a:p>
+        <a:p>
+          <a:pPr algn="l" rtl="0">
+            <a:lnSpc>
+              <a:spcPts val="1600"/>
+            </a:lnSpc>
+            <a:defRPr sz="1000"/>
+          </a:pPr>
+          <a:endParaRPr lang="en-US" altLang="zh-CN" sz="2400" b="0" i="0" u="none" strike="noStrike" baseline="0">
+            <a:solidFill>
+              <a:srgbClr val="000000"/>
+            </a:solidFill>
+            <a:latin typeface="华文中宋"/>
+            <a:ea typeface="华文中宋"/>
+          </a:endParaRPr>
+        </a:p>
+        <a:p>
+          <a:pPr algn="l" rtl="0">
+            <a:lnSpc>
+              <a:spcPts val="1600"/>
+            </a:lnSpc>
+            <a:defRPr sz="1000"/>
+          </a:pPr>
+          <a:r>
+            <a:rPr lang="zh-CN" altLang="en-US" sz="2400" b="0" i="0" u="none" strike="noStrike" baseline="0">
+              <a:solidFill>
+                <a:srgbClr val="000000"/>
+              </a:solidFill>
+              <a:latin typeface="华文中宋"/>
+              <a:ea typeface="华文中宋"/>
+            </a:rPr>
+            <a:t>记录至此表中。</a:t>
+          </a:r>
+        </a:p>
+      </xdr:txBody>
+    </xdr:sp>
+    <xdr:clientData fLocksWithSheet="0" fPrintsWithSheet="0"/>
+  </xdr:twoCellAnchor>
+  <xdr:twoCellAnchor>
+    <xdr:from>
+      <xdr:col>6</xdr:col>
+      <xdr:colOff>86591</xdr:colOff>
+      <xdr:row>34</xdr:row>
+      <xdr:rowOff>103909</xdr:rowOff>
+    </xdr:from>
+    <xdr:to>
+      <xdr:col>9</xdr:col>
+      <xdr:colOff>316674</xdr:colOff>
+      <xdr:row>37</xdr:row>
+      <xdr:rowOff>205010</xdr:rowOff>
+    </xdr:to>
+    <xdr:sp macro="" textlink="">
+      <xdr:nvSpPr>
+        <xdr:cNvPr id="7" name="矩形标注 18"/>
+        <xdr:cNvSpPr/>
+      </xdr:nvSpPr>
+      <xdr:spPr>
+        <a:xfrm>
+          <a:off x="3029585" y="11857355"/>
+          <a:ext cx="1972945" cy="1691640"/>
+        </a:xfrm>
+        <a:prstGeom prst="wedgeRectCallout">
+          <a:avLst>
+            <a:gd name="adj1" fmla="val -89769"/>
+            <a:gd name="adj2" fmla="val 13462"/>
+          </a:avLst>
+        </a:prstGeom>
+        <a:solidFill>
+          <a:srgbClr val="FFFF00"/>
+        </a:solidFill>
+      </xdr:spPr>
+      <xdr:style>
+        <a:lnRef idx="2">
+          <a:schemeClr val="accent1">
+            <a:shade val="50000"/>
+          </a:schemeClr>
+        </a:lnRef>
+        <a:fillRef idx="1001">
+          <a:schemeClr val="lt1"/>
+        </a:fillRef>
+        <a:effectRef idx="0">
+          <a:schemeClr val="accent1"/>
+        </a:effectRef>
+        <a:fontRef idx="minor">
+          <a:schemeClr val="lt1"/>
+        </a:fontRef>
+      </xdr:style>
+      <xdr:txBody>
+        <a:bodyPr vertOverflow="clip" horzOverflow="clip" rtlCol="0" anchor="t"/>
+        <a:lstStyle/>
+        <a:p>
+          <a:pPr rtl="0"/>
+          <a:r>
+            <a:rPr lang="zh-CN" altLang="zh-CN" sz="2000" b="0" i="0" baseline="0">
+              <a:solidFill>
+                <a:srgbClr val="FF0000"/>
+              </a:solidFill>
+              <a:effectLst/>
+              <a:latin typeface="+mn-lt"/>
+              <a:ea typeface="+mn-ea"/>
+              <a:cs typeface="+mn-cs"/>
+            </a:rPr>
+            <a:t>数据为每个月的累计值，表单显示一年的个人数据</a:t>
+          </a:r>
+          <a:endParaRPr lang="zh-CN" altLang="zh-CN" sz="3200">
+            <a:solidFill>
+              <a:srgbClr val="FF0000"/>
+            </a:solidFill>
+            <a:effectLst/>
+          </a:endParaRPr>
+        </a:p>
+      </xdr:txBody>
+    </xdr:sp>
+    <xdr:clientData/>
+  </xdr:twoCellAnchor>
+</xdr:wsDr>

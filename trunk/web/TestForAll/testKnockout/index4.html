@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <!--<script src="scripts/jquery-1.4.2.js"></script>-->
+    <!--<script src="scripts/knockout-1.2.1.js"></script>-->
+    <script src="scripts/knockout-3.4.2.js"></script>
+</head>
+<body>
+    <div>
+        You've clicked <span data-bind="text: numberOfClicks"></span> times
+        <button data-bind="click: incrementClickCounter">Click me</button>
+    </div>
+
+    <div onclick="(function showEventButton() {alert(event.button);})()">text event button propertyvalue</div>
+
+    <script type="text/javascript">
+
+        var viewModel = {
+            numberOfClicks: ko.observable(0),
+            //3.4版本获取源事件对象是在第二个参数
+            //以前的版本是在第一个参数传入源事件对象
+            incrementClickCounter: function (data,event) {
+            //incrementClickCounter: function (event) {
+                alert(event.button);
+                var previousCount = this.numberOfClicks();
+                this.numberOfClicks(previousCount + 1);
+            }
+        };
+        ko.applyBindings(viewModel);
+    </script>
+</body>
+</html>

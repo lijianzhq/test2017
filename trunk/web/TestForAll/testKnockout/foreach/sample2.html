@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="../scripts/knockout-3.4.2.debug.js"></script>
+</head>
+<body>
+    <ul data-bind="foreach: months">
+        <li>
+            The current item is: <b data-bind="text: $data"></b>
+        </li>
+    </ul> 
+    <script type="text/javascript">
+     ko.applyBindings({
+         months: ['Jan', 'Feb', 'Mar', 'etc']
+     });
+    </script>
+</body>
+</html>

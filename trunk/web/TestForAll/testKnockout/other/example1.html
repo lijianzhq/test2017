@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+
+    <script type="text/javascript">
+        //事件必须注册到document上，不能注册到body，如果body是空的话，无法捕获事件
+        window.document.onmouseup = function showMsg(e) {
+            e = window.event || e;
+            //alert(e.button);
+            //ie浏览器左键是1，火狐、google浏览器左键是0
+            if (e.button == 1 || e.button == 0) alert("left");
+            if (e.button == 2) {
+                alert("right");
+            }
+        }
+        window.document.oncontextmenu = function () {
+            return false;
+        };
+        setTimeout(function () { alert(0); }, 1000 * 60 * 2);
+    </script>
+</body>
+</html>

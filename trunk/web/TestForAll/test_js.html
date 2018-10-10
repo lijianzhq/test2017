@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript">
+        window.onload = function () {
+            testObjType();
+            //testInit();
+        };
+
+        function testObjType() {
+            var obj = {};
+            var arr = [];
+            console.log('typeof obj === "object"---' + (typeof obj === "object"));
+            console.log('typeof arr === "object"---' + (typeof arr === "object"));
+            console.log('typeof null === "object"---' + (typeof null === "object"));
+            console.log('typeof 1/0---' + (typeof 1 / 0));
+            console.log(Object.prototype.toString.call(arr) === "[object Object]");
+            console.log(Object.prototype.toString.call(arr));
+
+            console.log(Object.prototype.toString.call(/\d{6}/));
+            console.log(Object.prototype.toString.call(null));
+            console.log(Object.prototype.toString.call({}));
+            console.log(Object.prototype.toString.call(undefined));
+            console.log(Object.prototype.toString.call(function () { }));
+
+            console.log(typeof 1 / 0); //NaN（这个NaN不是字符串类型，是数值类型）
+            console.log(typeof typeof 1 / 0); //NaN（这个NaN不是字符串类型，是数值类型）
+            console.log(typeof (1 / 0)); //"number"
+            console.log(typeof NaN); //"number"
+            console.log(typeof typeof (1 / 0)); //"string"
+            console.log(typeof (typeof (1 / 0))); //"string"
+            console.log(typeof (typeof 1 / 0)); //"number"
+            console.log(typeof undefined); //"undefined"
+            console.log(typeof xxxxx); //"undefined"
+            console.log(typeof function () { }); //"function"
+        };
+
+        function testInit() {
+            var a = b = 3;
+            console.log("a=" + a);
+            console.log("b=" + b);
+        };
+
+        //(function () {
+        //    console.log(1);
+        //    setTimeout(function () { console.log(2) }, 1000);
+        //    setTimeout(function () { console.log(3) }, 0);
+        //    console.log(4);
+        //})();
+
+        function testRegExp() {
+            var regExp = /\d{6}/;
+            //alert(regExp.test("8888"));
+            //alert(regExp.test("12345a"));
+            //alert(regExp.test("123456"));
+            console.log(regExp.test("8888"));
+        };
+    </script>
+</head>
+<body>
+
+</body>
+</html>

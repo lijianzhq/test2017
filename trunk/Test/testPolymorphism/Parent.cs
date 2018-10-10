@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test.testPolymorphism
+{
+    class Parent
+    {
+        public Parent()
+        {
+            Init();
+        }
+
+        public virtual void Init()
+        {
+            Console.WriteLine("parent");
+        }
+    }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../boostrap/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+    <title>tooltips-test1</title>
+</head>
+
+<body>
+    <div class="container" style="padding-top:50px;">
+        <a href="#" role="button" data-toggle="tooltip" data-title="tooltiptitle" data-placement="top" class="btn btn-default">
+            tooltip on top
+        </a>
+        <br>
+        <br>
+        <p>
+            <a id="tooltipOnLeft" href="#" data-toggle="tooltip" data-title="tooltiptitle" data-placement="left">
+                tooltip on left
+            </a>
+        </p>
+    </div>
+
+    <script src="../../boostrap/jquery-3.3.1.min.js"></script>
+    <script src="../../boostrap/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //方法一：单独绑定
+            $("#tooltipOnLeft").mouseover(function(){
+                $(this).tooltip('toggle');
+            });
+            //方法二：全部初始化，绑定tooltip事件
+            /* $('[data-toggle="tooltip"]').tooltip() */
+        });
+    </script>
+</body>
+
+</html>

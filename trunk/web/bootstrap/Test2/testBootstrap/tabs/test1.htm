@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../boostrap/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+    <title>tab标签</title>
+</head>
+
+<body>
+    <div>
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active">
+                <a href="#HomePanel">Home</a>
+            </li>
+            <li role="presentation">
+                <a href="#ProfilePanel">Profile</a>
+            </li>
+            <li role="presentation">
+                <a href="#MessagesPanel">Messages</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade in active" id="HomePanel">Home...</div>
+            <div class="tab-pane fade" id="ProfilePanel">Profile...</div>
+            <div class="tab-pane fade" id="MessagesPanel">Messages...</div>
+        </div>
+    </div>
+
+    <script src="../../boostrap/jquery-3.3.1.min.js"></script>
+    <script src="../../boostrap/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(".nav a").click(function (e) {
+                e.preventDefault();
+                $(this).tab('show');
+            });
+        });
+    </script>
+</body>
+
+</html>

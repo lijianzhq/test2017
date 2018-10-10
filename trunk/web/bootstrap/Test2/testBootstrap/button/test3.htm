@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../boostrap/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+    <title>button group</title>
+</head>
+
+<body>
+    <div class="container">
+        <br>
+        <br>
+        <br>
+        <div class="btn-group" role="group" aria-label="BtnGroup" id="mybuttons">
+            <button class="btn btn-default">Left</button>
+            <button class="btn btn-default">Middle</button>
+            <button class="btn btn-default">Right</button>
+        </div>
+        <br>
+        <br>
+        <div class="btn-group" role="group" aria-label="BtnGroup">
+            <button class="btn btn-primary">Left</button>
+            <button class="btn btn-primary">Middle</button>
+            <button class="btn btn-primary">Right</button>
+        </div>
+        <br>
+        <br>
+        <div class="btn-group" role="group">
+            <button class="btn btn-primary btn-lg">最大</button>
+            <button class="btn btn-primary btn-sm">中等大小</button>
+            <button class="btn btn-primary btn-xs">最小</button>
+        </div>
+        <br>
+        <br>
+        <div class="btn-group" role="group">
+            <div class="btn btn-default">1</div>
+            <div class="btn btn-default">2</div>
+            <div class="btn-group" role="group">
+                <button class="btn btn-default" data-toggle="dropdown">
+                    下拉框
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>aa</li>
+                    <li>bb</li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../boostrap/jquery-3.3.1.min.js"></script>
+    <script src="../../boostrap/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#mybuttons button").click(function () {
+                $("#mybuttons button").removeClass("btn-primary");
+                $(this).addClass("btn-primary");
+            });
+        });
+    </script>
+</body>
+
+</html>

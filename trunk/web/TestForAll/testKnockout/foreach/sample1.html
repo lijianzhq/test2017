@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="../scripts/jquery-3.2.1.js"></script>
+    <script src="../scripts/knockout-3.4.2.debug.js"></script>
+    <script src="../scripts/knockout.mapping-latest.debug.js"></script>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>firstName</th>
+                <th>secondName</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach:students">
+            <tr>
+                <td data-bind="text:$data.firstName,visible:showEdit"></td>
+                <td data-bind="text:secondName"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <input type="button" value="更新li 的 secondName" onclick="updateSecondName()" />
+
+    <script type="text/javascript">
+        function updateSecondName() {
+            //alert(model.students()[0].secondName());
+            model.students()[0].secondName("jjjjj");
+            //alert(model.students()[0].secondName());
+        };
+        function Student(firstName, secondName,showEdit) {
+            this.firstName = firstName;
+            //this.secondName = ko.observable(secondName);
+            this.secondName = secondName;
+            this.showEdit = showEdit;
+        };
+        function viewModel() {
+            var seft = this;
+            seft.students = ko.observableArray()
+        }
+        var model = new viewModel();
+        var stus = [new Student("li", "jian", true), new Student("zhu", "haiqing", true)];
+        var newStus = [];
+        $.each(stus, function (index, item) {
+            try {
+                //alert(ko.mapping.fromJS(item));
+                newStus.push(ko.mapping.fromJS(item));
+            } catch (e) {
+                alert(e.message);
+            }
+        });
+        model.students(newStus);
+        ko.applyBindings(model);
+
+        //$(document).ready(function () {
+            
+        //});
+        //ko.applyBindings({
+        //    students: [
+        //        { firstName: 'Bert', lastName: 'Bertington' },
+        //        { firstName: 'Charles', lastName: 'Charlesforth' },
+        //        { firstName: 'Denise', lastName: 'Dentiste' }
+        //    ]
+        //});
+    </script>
+</body>
+</html>

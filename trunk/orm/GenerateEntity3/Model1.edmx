@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Model.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="11.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityType Name="UPLOADFILE">
+          <Key>
+            <PropertyRef Name="CODE" />
+          </Key>
+          <Property Name="CODE" Type="nvarchar2" MaxLength="50" Nullable="false" />
+          <Property Name="FILENAME" Type="nvarchar2" MaxLength="500" />
+          <Property Name="REFTABLENAME" Type="nvarchar2" MaxLength="50" />
+          <Property Name="REFTABLECODE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="BARCODE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="SAVEPATH" Type="nvarchar2" MaxLength="500" />
+          <Property Name="STATUS" Type="number" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="ATTRIBUTE1" Type="nvarchar2" MaxLength="2000" />
+          <Property Name="ATTRIBUTE2" Type="nvarchar2" MaxLength="2000" />
+          <Property Name="ATTRIBUTE3" Type="nvarchar2" MaxLength="2000" />
+          <Property Name="ATTRIBUTE4" Type="nvarchar2" MaxLength="2000" />
+          <Property Name="ATTRIBUTE5" Type="nvarchar2" MaxLength="2000" />
+          <Property Name="CREATEON" Type="date" Nullable="false" />
+          <Property Name="LASTUPDATEON" Type="date" Nullable="false" />
+          <Property Name="CREATEBY" Type="nvarchar2" MaxLength="100" />
+          <Property Name="LASTUPDATEBY" Type="nvarchar2" MaxLength="100" />
+          <Property Name="ORDERNO" Type="number" Precision="10" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UPLOADFILEOPHISTORY">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="UPLOADFILECODE" Type="nvarchar2" MaxLength="50" />
+          <Property Name="OPTYPE" Type="number" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="CREATEON" Type="date" Nullable="false" />
+          <Property Name="LASTUPDATEON" Type="date" Nullable="false" />
+          <Property Name="CREATEBY" Type="nvarchar2" MaxLength="100" />
+          <Property Name="LASTUPDATEBY" Type="nvarchar2" MaxLength="100" />
+          <Property Name="ORDERNO" Type="number" Precision="10" Scale="0" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_UPLOADFILEOPHIST_1708377677">
+          <End Role="UPLOADFILE" Type="Self.UPLOADFILE" Multiplicity="0..1" />
+          <End Role="UPLOADFILEOPHISTORY" Type="Self.UPLOADFILEOPHISTORY" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UPLOADFILE">
+              <PropertyRef Name="CODE" />
+            </Principal>
+            <Dependent Role="UPLOADFILEOPHISTORY">
+              <PropertyRef Name="UPLOADFILECODE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="UPLOADFILE" EntityType="Self.UPLOADFILE" Schema="TEST" store:Type="Tables" />
+          <EntitySet Name="UPLOADFILEOPHISTORY" EntityType="Self.UPLOADFILEOPHISTORY" Schema="TEST" store:Type="Tables" />
+          <AssociationSet Name="FK_UPLOADFILEOPHIST_1708377677" Association="Self.FK_UPLOADFILEOPHIST_1708377677">
+            <End Role="UPLOADFILE" EntitySet="UPLOADFILE" />
+            <End Role="UPLOADFILEOPHISTORY" EntitySet="UPLOADFILEOPHISTORY" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityType Name="UPLOADFILE">
+          <Key>
+            <PropertyRef Name="CODE" />
+          </Key>
+          <Property Name="CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FILENAME" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="REFTABLENAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="REFTABLECODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BARCODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SAVEPATH" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="STATUS" Type="Int32" Nullable="false" />
+          <Property Name="ATTRIBUTE1" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="ATTRIBUTE2" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="ATTRIBUTE3" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="ATTRIBUTE4" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="ATTRIBUTE5" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="CREATEON" Type="DateTime" Nullable="false" />
+          <Property Name="LASTUPDATEON" Type="DateTime" Nullable="false" />
+          <Property Name="CREATEBY" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="LASTUPDATEBY" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ORDERNO" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="UPLOADFILEOPHISTORY" Relationship="Self.FK_UPLOADFILEOPHIST_1708377677" FromRole="UPLOADFILE" ToRole="UPLOADFILEOPHISTORY" />
+        </EntityType>
+        <EntityType Name="UPLOADFILEOPHISTORY">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="OPTYPE" Type="Int32" Nullable="false" />
+          <Property Name="CREATEON" Type="DateTime" Nullable="false" />
+          <Property Name="LASTUPDATEON" Type="DateTime" Nullable="false" />
+          <Property Name="CREATEBY" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="LASTUPDATEBY" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ORDERNO" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="UPLOADFILE" Relationship="Self.FK_UPLOADFILEOPHIST_1708377677" FromRole="UPLOADFILEOPHISTORY" ToRole="UPLOADFILE" />
+        </EntityType>
+        <Association Name="FK_UPLOADFILEOPHIST_1708377677">
+          <End Role="UPLOADFILE" Type="Self.UPLOADFILE" Multiplicity="0..1" />
+          <End Role="UPLOADFILEOPHISTORY" Type="Self.UPLOADFILEOPHISTORY" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="UPLOADFILE" EntityType="Self.UPLOADFILE" />
+          <EntitySet Name="UPLOADFILEOPHISTORY" EntityType="Self.UPLOADFILEOPHISTORY" />
+          <AssociationSet Name="FK_UPLOADFILEOPHIST_1708377677" Association="Self.FK_UPLOADFILEOPHIST_1708377677">
+            <End Role="UPLOADFILE" EntitySet="UPLOADFILE" />
+            <End Role="UPLOADFILEOPHISTORY" EntitySet="UPLOADFILEOPHISTORY" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="UPLOADFILE">
+            <EntityTypeMapping TypeName="Model.UPLOADFILE">
+              <MappingFragment StoreEntitySet="UPLOADFILE">
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+                <ScalarProperty Name="FILENAME" ColumnName="FILENAME" />
+                <ScalarProperty Name="REFTABLENAME" ColumnName="REFTABLENAME" />
+                <ScalarProperty Name="REFTABLECODE" ColumnName="REFTABLECODE" />
+                <ScalarProperty Name="BARCODE" ColumnName="BARCODE" />
+                <ScalarProperty Name="SAVEPATH" ColumnName="SAVEPATH" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="ATTRIBUTE1" ColumnName="ATTRIBUTE1" />
+                <ScalarProperty Name="ATTRIBUTE2" ColumnName="ATTRIBUTE2" />
+                <ScalarProperty Name="ATTRIBUTE3" ColumnName="ATTRIBUTE3" />
+                <ScalarProperty Name="ATTRIBUTE4" ColumnName="ATTRIBUTE4" />
+                <ScalarProperty Name="ATTRIBUTE5" ColumnName="ATTRIBUTE5" />
+                <ScalarProperty Name="CREATEON" ColumnName="CREATEON" />
+                <ScalarProperty Name="LASTUPDATEON" ColumnName="LASTUPDATEON" />
+                <ScalarProperty Name="CREATEBY" ColumnName="CREATEBY" />
+                <ScalarProperty Name="LASTUPDATEBY" ColumnName="LASTUPDATEBY" />
+                <ScalarProperty Name="ORDERNO" ColumnName="ORDERNO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UPLOADFILEOPHISTORY">
+            <EntityTypeMapping TypeName="Model.UPLOADFILEOPHISTORY">
+              <MappingFragment StoreEntitySet="UPLOADFILEOPHISTORY">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="OPTYPE" ColumnName="OPTYPE" />
+                <ScalarProperty Name="CREATEON" ColumnName="CREATEON" />
+                <ScalarProperty Name="LASTUPDATEON" ColumnName="LASTUPDATEON" />
+                <ScalarProperty Name="CREATEBY" ColumnName="CREATEBY" />
+                <ScalarProperty Name="LASTUPDATEBY" ColumnName="LASTUPDATEBY" />
+                <ScalarProperty Name="ORDERNO" ColumnName="ORDERNO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="FK_UPLOADFILEOPHIST_1708377677" TypeName="Model.FK_UPLOADFILEOPHIST_1708377677" StoreEntitySet="UPLOADFILEOPHISTORY">
+            <EndProperty Name="UPLOADFILE">
+              <ScalarProperty Name="CODE" ColumnName="UPLOADFILECODE" />
+            </EndProperty>
+            <EndProperty Name="UPLOADFILEOPHISTORY">
+              <ScalarProperty Name="ID" ColumnName="ID" />
+            </EndProperty>
+            <Condition IsNull="false" ColumnName="UPLOADFILECODE" />
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

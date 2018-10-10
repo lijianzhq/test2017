@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AEFC7CC0-3955-4EB9-AA66-58F750FE85F2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Files</RootNamespace>
+    <AssemblyName>Files</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="xl\drawings\vmlDrawing1.vml" />
+    <None Include="xl\drawings\_rels\drawing1.xml.rels" />
+    <None Include="xl\drawings\_rels\drawing2.xml.rels" />
+    <None Include="xl\drawings\_rels\drawing3.xml.rels" />
+    <None Include="xl\drawings\_rels\vmlDrawing1.vml.rels" />
+    <None Include="xl\media\image1.emf" />
+    <None Include="xl\media\image3.emf" />
+    <None Include="xl\printerSettings\printerSettings1.bin" />
+    <None Include="xl\printerSettings\printerSettings2.bin" />
+    <None Include="xl\printerSettings\printerSettings3.bin" />
+    <None Include="xl\worksheets\_rels\sheet1.xml.rels" />
+    <None Include="xl\worksheets\_rels\sheet2.xml.rels" />
+    <None Include="xl\worksheets\_rels\sheet3.xml.rels" />
+    <None Include="xl\_rels\workbook.xml.rels" />
+    <None Include="_rels\.rels" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="docProps\app.xml" />
+    <Content Include="docProps\core.xml" />
+    <Content Include="docProps\custom.xml" />
+    <Content Include="xl\calcChain.xml" />
+    <Content Include="xl\charts\chart1.xml" />
+    <Content Include="xl\charts\chart2.xml" />
+    <Content Include="xl\charts\chart3.xml" />
+    <Content Include="xl\charts\chart4.xml" />
+    <Content Include="xl\charts\chart5.xml" />
+    <Content Include="xl\charts\chart6.xml" />
+    <Content Include="xl\drawings\drawing1.xml" />
+    <Content Include="xl\drawings\drawing2.xml" />
+    <Content Include="xl\drawings\drawing3.xml" />
+    <Content Include="xl\media\image2.jpeg" />
+    <Content Include="xl\media\image4.png" />
+    <Content Include="xl\sharedStrings.xml" />
+    <Content Include="xl\styles.xml" />
+    <Content Include="xl\theme\theme1.xml" />
+    <Content Include="xl\workbook.xml" />
+    <Content Include="xl\worksheets\sheet1.xml" />
+    <Content Include="xl\worksheets\sheet2.xml" />
+    <Content Include="xl\worksheets\sheet3.xml" />
+    <Content Include="[Content_Types].xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../boostrap/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+    <title>Varying modal content based on trigger button</title>
+</head>
+
+<body>
+    <div class="container">
+        <br>
+        <button class="btn btn-primary" type="button" data-from="Button1" data-toggle="modal" data-target="#test_modal">
+            Button1
+        </button>
+        <button class="btn btn-primary" type="button" data-from="Button2" data-toggle="modal" data-target="#test_modal">
+            Button2
+        </button>
+        <br>
+    </div>
+
+    <div class="modal fade" role="dialog" tabindex="-1" id="test_modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal" type="button">
+                        <span aria-hidden="ture">x</span>
+                    </button>
+                    <h4 class="modal-title">modal title</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="modalcontenttitle" class="control-label">Recipient:</label>
+                            <input type="text" class="form-control" id="modalcontenttitle">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="control-label">Message:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Send message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../boostrap/jquery-3.3.1.min.js"></script>
+    <script src="../../boostrap/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            //$('[data-toggle="modal"]').modal();
+
+            $('[role="dialog"]').on('show.bs.modal', function (e) {
+                var button = $(e.relatedTarget);
+                var fromData = button.data("from");
+                var modalDialog = $(this);
+                modalDialog.find('.modal-title').text(fromData);
+                modalDialog.find('#modalcontenttitle').val(fromData);
+            });
+        });
+    </script>
+</body>
+
+</html>

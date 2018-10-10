@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>KnockoutDemo1</title>
+    <!--<script type='text/javascript' src='~/Js/jquery-1.8.3.min.js'></script>
+    <script type='text/javascript' src='~/Js/jquery-tmpl.js'></script>
+    <script type='text/javascript' src='~/Js/knockout-2.2.0.js'></script>-->
+    <script src="scripts/jquery-1.4.2.js"></script>
+    <script src="scripts/jquery.tmpl.js"></script>
+    <script src="scripts/knockout-1.2.1.js"></script>
+    <style type="text/css">
+        .profitWarning {
+            color: red;
+        }
+
+        .colorBlue {
+            color: blue;
+        }
+
+        .fontWeight {
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <div data-bind="css: { profitWarning: currentProfit() < 0, fontWeight:isSevere },attr:{innerText:divText}">
+        Profit Information
+    </div>
+
+
+    <script type="text/javascript">
+        var viewModel = {
+            currentProfit: ko.observable(150000),
+            isSevere: true,
+            divText: 'bindAttrInnerText'
+            // Positive value, so initially we don't apply the "profitWarning" class
+        };
+
+        viewModel.currentProfit(-50);
+        // Causes the "profitWarning" class to be applied
+        $(document).ready(function () {
+            ko.applyBindings(viewModel);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../boostrap/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+    <title>tabs</title>
+</head>
+
+<body>
+    <div>
+        <ul class="nav nav-pills">
+            <li class="active" role="presentation">
+                <a href="#homepage">Home</a>
+            </li>
+            <li role="presentation">
+                <a href="#usercenterpage">usercenter</a>
+            </li>
+            <li role="presentation">
+                <a href="#contactuspage">contact us</a>
+            </li>
+            <li role="presentation" class="disabled">
+                <a href="#">disable link</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div id="homepage" class="tab-pane active">首页内容哦....</div>
+            <div id="usercenterpage" class="tab-pane">个人中心内容哦....</div>
+            <div id="contactuspage" class="tab-pane">联系我们内容哦....</div>
+        </div>
+    </div>
+
+    <script src="../../boostrap/jquery-3.3.1.min.js"></script>
+    <script src="../../boostrap/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(".nav a").click(function (e) {
+                //alert(0);
+                e.preventDefault();
+                $(this).tab('show');
+            });
+        });
+    </script>
+</body>
+
+</html>

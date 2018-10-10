@@ -1,0 +1,469 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props" Condition="Exists('..\..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2C6DA16C-DAEA-4C9B-8575-DFFE6F0149DA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestUploadFile</RootNamespace>
+    <AssemblyName>TestUploadFile</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\logConfig.xml" />
+    <Content Include="demo.aspx" />
+    <Content Include="demos\demo1.aspx" />
+    <Content Include="examples\cropper\cropper.css" />
+    <Content Include="examples\cropper\cropper.js" />
+    <Content Include="examples\cropper\index.html" />
+    <Content Include="examples\cropper\jquery.js" />
+    <Content Include="examples\cropper\style.css" />
+    <Content Include="examples\cropper\uploader.js" />
+    <Content Include="examples\css\webuploader.css" />
+    <Content Include="examples\dist\Uploader.swf" />
+    <Content Include="examples\dist\webuploader.css" />
+    <Content Include="examples\dist\webuploader.custom.js" />
+    <Content Include="examples\dist\webuploader.custom.min.js" />
+    <Content Include="examples\dist\webuploader.fis.js" />
+    <Content Include="examples\dist\webuploader.flashonly.js" />
+    <Content Include="examples\dist\webuploader.flashonly.min.js" />
+    <Content Include="examples\dist\webuploader.html5nodepend.js" />
+    <Content Include="examples\dist\webuploader.html5nodepend.min.js" />
+    <Content Include="examples\dist\webuploader.html5only.js" />
+    <Content Include="examples\dist\webuploader.html5only.min.js" />
+    <Content Include="examples\dist\webuploader.js" />
+    <Content Include="examples\dist\webuploader.min.js" />
+    <Content Include="examples\dist\webuploader.noimage.js" />
+    <Content Include="examples\dist\webuploader.noimage.min.js" />
+    <Content Include="examples\dist\webuploader.nolog.js" />
+    <Content Include="examples\dist\webuploader.nolog.min.js" />
+    <Content Include="examples\dist\webuploader.withoutimage.js" />
+    <Content Include="examples\dist\webuploader.withoutimage.min.js" />
+    <Content Include="examples\image-upload\bg.png" />
+    <Content Include="examples\image-upload\expressInstall.swf" />
+    <Content Include="examples\image-upload\icons.png" />
+    <Content Include="examples\image-upload\image.png" />
+    <Content Include="examples\image-upload\index.html" />
+    <Content Include="examples\image-upload\jquery.js" />
+    <Content Include="examples\image-upload\progress.png" />
+    <Content Include="examples\image-upload\style.css" />
+    <Content Include="examples\image-upload\success.png" />
+    <Content Include="examples\image-upload\upload.js" />
+    <Content Include="examples\md5-demo\index.html" />
+    <Content Include="examples\md5-demo\script.js" />
+    <Content Include="examples\requirejs\app.js" />
+    <Content Include="examples\requirejs\index.html" />
+    <Content Include="examples\requirejs\require.js" />
+    <Content Include="FileSave.aspx" />
+    <Content Include="webuploaderDemo\fileUploadPlugin.js" />
+    <Content Include="webuploaderDemo\fileUploadPluginTest.html" />
+    <Content Include="Global.asax" />
+    <Content Include="PostFileToFTP.aspx" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档.html" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\3529539.js" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\6709043925052693462_14422476852472291078.jpeg" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\abg.js" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\addata.js" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\ads%281%29.html" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\ads%282%29.html" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\ads%283%29.html" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\ads%284%29.html" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\ads.html" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\analytics.js" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\angular.min.js" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\ca-pub-1960123950214545.js" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\common_scripts_v3.js" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\common_styles_v2.css" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\F001Nl1R3CaG001Qt453.jpg" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\googlelogo_dark_color_84x28dp.png" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\iconx2-000000.png" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\integrator.js" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\layouts_bootstrap_v3.js" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\logo.js" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\logorender.js" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\MgaOaFuzNRitgJev3pjUPCLRunxfo7J18TtCmzrnOHc.js" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\MinimalCarousel_1a-2.js" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\MinimalCarousel_1a-2_468x60.html" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\MinimalCarousel_1a-2_common.css" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\m_qs_click_protection.js" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\m_window_focus_non_hydra.js" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\osd.js" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\osd_listener.js" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\saved_resource%281%29.html" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\saved_resource%282%29.html" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\saved_resource%283%29.html" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\saved_resource%284%29.html" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\saved_resource%285%29.html" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\saved_resource%286%29.html" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\saved_resource.html" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\show_ads.js" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\show_ads_impl.js" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\su.js" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\utils_min.js" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\zrt_lookup.html" />
+    <Content Include="swfupload\swfupload-jquery-plugin-master\examples\01 - single uploader.html" />
+    <Content Include="swfupload\swfupload-jquery-plugin-master\examples\multipleUploaders.html" />
+    <Content Include="swfupload\swfupload-jquery-plugin-master\examples\upload.php" />
+    <Content Include="swfupload\swfupload-jquery-plugin-master\src\jquery-1.3.2.js" />
+    <Content Include="swfupload\swfupload-jquery-plugin-master\src\jquery.swfupload.js" />
+    <Content Include="swfupload\swfupload-jquery-plugin-master\vendor\swfupload\swfupload.js" />
+    <Content Include="swfupload\swfupload-jquery-plugin-master\vendor\swfupload\swfupload.queue.js" />
+    <Content Include="swfupload\swfupload-jquery-plugin-master\vendor\swfupload\swfupload.swf" />
+    <Content Include="swfupload\swfupload-jquery-plugin-master\vendor\swfupload\XPButtonUploadText_61x22.png" />
+    <Content Include="swfupload\SWFUpload-master\.gitignore" />
+    <Content Include="swfupload\SWFUpload-master\core\Core Changelog.txt" />
+    <Content Include="swfupload\SWFUpload-master\core\Documentation\index.html" />
+    <Content Include="swfupload\SWFUpload-master\core\Flash\swfupload.swf" />
+    <Content Include="swfupload\SWFUpload-master\core\plugins\SWFObject License.txt" />
+    <Content Include="swfupload\SWFUpload-master\core\plugins\swfupload.cookies.js" />
+    <Content Include="swfupload\SWFUpload-master\core\plugins\swfupload.queue.js" />
+    <Content Include="swfupload\SWFUpload-master\core\plugins\swfupload.speed.js" />
+    <Content Include="swfupload\SWFUpload-master\core\plugins\swfupload.swfobject.js" />
+    <Content Include="swfupload\SWFUpload-master\core\swfupload license.txt" />
+    <Content Include="swfupload\SWFUpload-master\core\swfupload.js" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo.net\Default.aspx" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo.net\Global.asax" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo.net\images\error.gif" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo.net\images\page_white_add.png" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo.net\images\toobig.gif" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo.net\images\uploadlimit.gif" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo.net\images\XPButtonNoText_160x22.png" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo.net\images\zerobyte.gif" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo.net\js\handlers.js" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo.net\thumbnail.aspx" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo.net\upload.aspx" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo.vb.net\App_Code\Thumbnail.vb" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo.vb.net\Default.aspx" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo.vb.net\Default.aspx.vb" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo.vb.net\Global.asax" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo.vb.net\images\error.gif" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo.vb.net\images\page_white_add.png" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo.vb.net\images\toobig.gif" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo.vb.net\images\uploadlimit.gif" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo.vb.net\images\XPButtonNoText_160x22.png" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo.vb.net\images\zerobyte.gif" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo.vb.net\js\handlers.js" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo.vb.net\Login.aspx" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo.vb.net\Login.aspx.vb" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo.vb.net\ShowThumbnail.aspx" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo.vb.net\ShowThumbnail.aspx.vb" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo.vb.net\upload.aspx" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo.vb.net\upload.aspx.vb" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo\images\error.gif" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo\images\SmallSpyGlassWithTransperancy_17x18.png" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo\images\toobig.gif" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo\images\uploadlimit.gif" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo\images\zerobyte.gif" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo\index.php" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo\js\handlers.js" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo\thumbnail.php" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo\upload.php" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\cookiebugdemo\index.php" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\cookiebugdemo\js\handlers.js" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\cookiebugdemo\upload.php" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\cookiebugdemo\XPButtonUploadText_61x22.png" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\css\default.css" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\eidemo\images\TestImageNoText_65x29.png" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\eidemo\index.php" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\eidemo\js\fileprogress.js" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\eidemo\js\handlers.js" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\eidemo\upload.php" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\featuresdemo\css\featuresdemo.css" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\featuresdemo\images\add.png" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\featuresdemo\images\btn_center.gif" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\featuresdemo\images\btn_left.gif" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\featuresdemo\images\btn_parts.gif" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\featuresdemo\images\btn_right.gif" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\featuresdemo\images\btn_states.gif" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\featuresdemo\images\button_270x22.png" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\featuresdemo\images\delete.png" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\featuresdemo\index.php" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\featuresdemo\js\featuresdemo.js" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\featuresdemo\js\handlers.js" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\featuresdemo\upload.php" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\formsdemo\index.php" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\formsdemo\js\fileprogress.js" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\formsdemo\js\handlers.js" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\formsdemo\thanks.php" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\formsdemo\upload.php" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\formsdemo\XPButtonUploadText_61x22.png" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\images\cancelbutton.gif" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\images\header-bg.jpg" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\images\logo.gif" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\index.htm" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\multiinstancedemo\index.php" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\multiinstancedemo\js\fileprogress.js" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\multiinstancedemo\js\handlers.js" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\multiinstancedemo\upload.php" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\multiinstancedemo\XPButtonUploadText_61x22.png" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\overlaydemo\index.php" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\overlaydemo\js\fileprogress.js" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\overlaydemo\js\handlers.js" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\overlaydemo\upload.php" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\simpledemo\images\TestImageNoText_65x29.png" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\simpledemo\index.php" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\simpledemo\js\fileprogress.js" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\simpledemo\js\handlers.js" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\simpledemo\upload.php" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\speeddemo\images\XPButtonUploadText_61x22.png" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\speeddemo\index.php" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\speeddemo\js\handlers.js" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\speeddemo\upload.php" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\swfobjectdemo\index.php" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\swfobjectdemo\js\fileprogress.js" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\swfobjectdemo\js\handlers.js" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\swfobjectdemo\upload.php" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\swfobjectdemo\XPButtonUploadText_61x22.png" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\swfupload\swfupload.cookies.js" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\swfupload\swfupload.js" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\swfupload\swfupload.queue.js" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\swfupload\swfupload.speed.js" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\swfupload\swfupload.swf" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\swfupload\swfupload.swfobject.js" />
+    <Content Include="swfupload\SWFUpload-master\samples\Sample-Demo Changelog.txt" />
+    <Content Include="swfupload\SWFUpload-master\samples\samples\apache\htaccess-sample.txt" />
+    <Content Include="swfupload\SWFUpload-master\samples\samples\asp.net\Global.cs.asax" />
+    <Content Include="swfupload\SWFUpload-master\samples\samples\asp.net\Global.vb.asax" />
+    <Content Include="swfupload\SWFUpload-master\samples\samples\buttons\FullyTransparent_65x29.png" />
+    <Content Include="swfupload\SWFUpload-master\samples\samples\buttons\SmallSpyGlassWithTransperancy_17x18.png" />
+    <Content Include="swfupload\SWFUpload-master\samples\samples\buttons\TestImageNoText_65x29.png" />
+    <Content Include="swfupload\SWFUpload-master\samples\samples\buttons\TestImageWithText_65x29.png" />
+    <Content Include="swfupload\SWFUpload-master\samples\samples\buttons\XPButtonNoText_61x22.png" />
+    <Content Include="swfupload\SWFUpload-master\samples\samples\buttons\XPButtonUploadText_61x22.png" />
+    <Content Include="swfupload\SWFUpload-master\samples\samples\php\test.php" />
+    <Content Include="swfupload\SWFUpload-master\samples\samples\php\upload.php" />
+    <Content Include="swfupload\SWFUpload-master\samples\samples\readme.txt" />
+    <Content Include="swfupload\swfupload.swf.v2.5.0.beta3.2\swfupload.swf.v2.5.0.beta3.2.swf" />
+    <Content Include="test.aspx" />
+    <Content Include="upload.js" />
+    <Content Include="Web.config" />
+    <Content Include="webuploader0.1.5\jquery-3.3.1.js" />
+    <Content Include="webuploader0.1.5\jquery-3.3.1.min.js" />
+    <Content Include="webuploader0.1.5\purl.js" />
+    <Content Include="webuploader0.1.5\Uploader.swf" />
+    <Content Include="webuploader0.1.5\webuploader.css" />
+    <Content Include="webuploader0.1.5\webuploader.custom.js" />
+    <Content Include="webuploader0.1.5\webuploader.custom.min.js" />
+    <Content Include="webuploader0.1.5\webuploader.fis.js" />
+    <Content Include="webuploader0.1.5\webuploader.flashonly.js" />
+    <Content Include="webuploader0.1.5\webuploader.flashonly.min.js" />
+    <Content Include="webuploader0.1.5\webuploader.html5only.js" />
+    <Content Include="webuploader0.1.5\webuploader.html5only.min.js" />
+    <Content Include="webuploader0.1.5\webuploader.js" />
+    <Content Include="webuploader0.1.5\webuploader.min.js" />
+    <Content Include="webuploader0.1.5\webuploader.noimage.js" />
+    <Content Include="webuploader0.1.5\webuploader.noimage.min.js" />
+    <Content Include="webuploader0.1.5\webuploader.nolog.js" />
+    <Content Include="webuploader0.1.5\webuploader.nolog.min.js" />
+    <Content Include="webuploader0.1.5\webuploader.withoutimage.js" />
+    <Content Include="webuploader0.1.5\webuploader.withoutimage.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="demo.aspx.cs">
+      <DependentUpon>demo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="demo.aspx.designer.cs">
+      <DependentUpon>demo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="demos\demo1.aspx.cs">
+      <DependentUpon>demo1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="demos\demo1.aspx.designer.cs">
+      <DependentUpon>demo1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fileSave.ashx.cs">
+      <DependentUpon>fileSave.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="FileSave.aspx.cs">
+      <DependentUpon>FileSave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileSave.aspx.designer.cs">
+      <DependentUpon>FileSave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FtpClient.cs" />
+    <Compile Include="FtpHelper.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Handler1.ashx.cs">
+      <DependentUpon>Handler1.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="MergeFiles.ashx.cs">
+      <DependentUpon>MergeFiles.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="PostFileToFTP.aspx.cs">
+      <DependentUpon>PostFileToFTP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PostFileToFTP.aspx.designer.cs">
+      <DependentUpon>PostFileToFTP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="swfupload\SWFUpload-master\samples\demos\applicationdemo.net\App_Code\Thumbnail.cs" />
+    <Compile Include="swfupload\SWFUpload-master\samples\demos\applicationdemo.net\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="swfupload\SWFUpload-master\samples\demos\applicationdemo.net\test.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="swfupload\SWFUpload-master\samples\demos\applicationdemo.net\thumbnail.aspx.cs">
+      <DependentUpon>thumbnail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="swfupload\SWFUpload-master\samples\demos\applicationdemo.net\upload.aspx.cs">
+      <DependentUpon>upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="examples\image-upload\icons.psd" />
+    <Content Include="examples\image-upload\progress.psd" />
+    <Content Include="examples\dist\README.md" />
+    <Content Include="fileSave.ashx" />
+    <Content Include="Handler1.ashx" />
+    <Content Include="MergeFiles.ashx" />
+    <None Include="packages.config" />
+    <Content Include="swfupload\swfupload.swf.v2.5.0.beta3.2.zip" />
+    <Content Include="swfupload\swfupload-jquery-plugin-master\README" />
+    <Content Include="swfupload\SWFUpload-master\core\Flash\deploy.bat" />
+    <Content Include="swfupload\SWFUpload-master\core\Flash\ExternalCall.as" />
+    <Content Include="swfupload\SWFUpload-master\core\Flash\FileItem.as" />
+    <Content Include="swfupload\SWFUpload-master\core\Flash\Makefile" />
+    <Content Include="swfupload\SWFUpload-master\core\Flash\SWFUpload v2.as3proj" />
+    <Content Include="swfupload\SWFUpload-master\core\Flash\SWFUpload.as" />
+    <Content Include="swfupload\SWFUpload-master\core\Flash\URLParser.as" />
+    <Content Include="swfupload\SWFUpload-master\README.md" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo.net\Web.Config" />
+    <Content Include="swfupload\SWFUpload-master\samples\demos\applicationdemo.vb.net\Web.Config" />
+    <Content Include="swfupload\SWFUpload-master\samples\samples\asp.net\Web.Config" />
+    <Content Include="swfupload\SWFUpload-master\samples\samples\php\web.config" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\16901608800313035654" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\9242678941561395833" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\css" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\css%281%29" />
+    <Content Include="swfupload\SWFUpload V2.2.0 说明文档_files\stats" />
+    <Content Include="swfupload\swfupload-jquery-plugin-master.zip" />
+    <Content Include="swfupload\SWFUpload-master.zip" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="webuploader0.1.5\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+    <Folder Include="upload\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4231</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:4118/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="scripts/knockout-3.4.2.js"></script>
+</head>
+<body>
+    <p>please input:<input type="text" data-bind="value:inputValue, valueUpdate: 'afterkeydown'" /></p>
+    <p>your input is:<label data-bind="text:inputValue" /></p>
+    <script type="text/javascript">
+        var viewModel = {
+            inputValue: ko.observable("")
+        };
+
+        ko.applyBindings(viewModel);
+    </script>
+</body>
+</html>

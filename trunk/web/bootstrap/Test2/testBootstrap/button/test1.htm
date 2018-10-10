@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../boostrap/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+    <title>按钮demo</title>
+</head>
+
+<body>
+    <button id="mybutton" class="btn btn-primary" data-loading-text="数据加载中...">loading state</button>
+</body>
+<script src="../../boostrap/jquery-3.3.1.min.js"></script>
+<script src="../../boostrap/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $("#mybutton").click(function () {
+        var $btn = $(this).button("loading");
+        window.setTimeout(function () {
+            $btn.button("reset");
+        }, 2000);
+    });
+</script>
+
+</html>

@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="scripts/jquery-1.4.2.js"></script>
+    <script src="scripts/jquery.tmpl.js"></script>
+    <script src="scripts/knockout-1.2.1.js"></script>
+    <script type="text/javascript">
+        var person = {
+            "Name": ko.observable("LJ"),
+            "Salary": 20000
+        };
+        $(document).ready(function () {
+            ko.applyBindings(person);
+        });
+        function updateName() {
+            person.Name($("#txt_name").val());
+            //alert(person.Name);
+        };
+    </script>
+</head>
+<body>
+    The name is:<p data-bind="text:Name"></p>
+    <br />
+    <input type="text" id="txt_name" name="txt_name" />
+    <input type="button" id="btn_updateName" value="updateName" onclick="updateName()" />
+</body>
+</html>

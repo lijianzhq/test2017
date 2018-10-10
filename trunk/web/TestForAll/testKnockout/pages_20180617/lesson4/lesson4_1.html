@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <!--<script src="../../scripts/jquery-1.4.2.js"></script>
+    <script src="../../scripts/jquery.tmpl.js"></script>-->
+    <script src="../../scripts/knockout-3.4.2/knockout-3.4.2.js"></script>
+    <!--<script src="../../scripts/knockout-1.2.1.js"></script>-->
+    <title>lesson4-1</title>
+</head>
+<body>
+    <div data-bind='template: "personTemplate"'></div>
+    <script id='personTemplate' type='text/html'>
+        <button data-bind='click: makeOlder'>Make older</button>
+    </script>
+    <script type='text/javascript'>
+        var viewModel = {
+            //name: ko.observable('Bert'),
+            //age: ko.observable(78),
+            //makeOlder: function () {
+            //    this.age(this.age() + 1);
+            //}
+        };
+        ko.applyBindings({});
+    </script>
+</body>
+</html>

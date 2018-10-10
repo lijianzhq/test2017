@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="../../scripts/knockout-3.4.2/knockout-3.4.2.js"></script>
+</head>
+<body>
+    <a data-bind="attr: { href: url, title: details ,id: id}">
+        Report
+    </a>
+
+    <script type="text/javascript">
+        var viewModel = {
+            url: ko.observable("year-end.html"),
+            details: ko.observable("Report including final year-end statistics"),
+            id: 'mylink'
+        };
+        ko.applyBindings(viewModel);
+    </script>
+</body>
+</html>

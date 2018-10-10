@@ -1,0 +1,2950 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4BCFEAE1-EECE-4F4C-9147-09C6D94181FD}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>GenerateEntity</RootNamespace>
+    <AssemblyName>GenerateEntity</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.12.2.1100\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess.EntityFramework, Version=6.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.EntityFramework.12.2.1100\lib\net45\Oracle.ManagedDataAccess.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DB\DB_DB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_DB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DB_DB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DB_DB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_DB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_BU_IMPORT_TMP.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_BU_IMPORT_TMP2.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_BU_INSTRING_TMP.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_BU_LOG_APPLICATION.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_BU_PART_MODEL_IMP.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_AFFICHE.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_ALARM_D.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_ALARM_M.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_AREA.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_ASSEMBLY.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_ATTA_FILE.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_AUTO_RUN.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_BAD_TYPE.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_BIG_AREA.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_CAR_COLOR.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_CAR_CONFIG.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_CAR_TYPE.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_CAR_TYPE_INFO.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_CAR_TYPE_INTERN.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_CITY.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_COST_CENTER.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_COUNTY.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_DEPT.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_DEPT_SEC_USER.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_EMAIL_D.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_EMAIL_M.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_EMP.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_EQUIP.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_FACTORY.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_FAC_CAR_TYPE.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_FAC_LINK_MAN_INFO.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_FAC_SEC.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_FAC_SEC171125.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_GSERIES_MFGSERIES.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_INNER_COMP_SEC.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_INNER_COMP_SEC171125.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_INNER_DUTY_COMP.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_INNER_DUTY_COMP171125.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_IP_INFO.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_IP_INFO2.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_IP_INFO2016.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_IP_INFO_TEMP.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_LOG_COMP.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_LOOKUP_TYPE.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_LOOKUP_VALUE.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_MAC_TYPE.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_NOTICE_M.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_NOTICE_OBJ_D.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_PART.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_PART_BILL.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_PART_CPL_PLAN.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_PART_CPL_PROD.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_PART_MODEL.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_PART_RANGE.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_PART_SWITCH.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_POST.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_PROVINCE.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_PRO_LINE.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_PRO_LINE_D.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_ROLE_MENU.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_SECTION.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_SERIAL_CPL_REL.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_SMALL_AREA.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_SPEC_ID_PART.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_SUPPLIER.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_SUPPLIER_D.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_TEAM.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_USER_GROUP_D.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_USER_GROUP_M.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_VE_INFO.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\T_DB_DB_WORKSHOP.cs">
+      <DependentUpon>DB_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\CP_VER.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\DB_MQCSBUS.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_MQCSBUS.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\DB_MQCSBUS.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\DB_MQCSBUS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_MQCSBUS.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\MAP_OPTCBL_POINT_70.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\PP100TEST02.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\PP100TEST03.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\TMP1.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\TMP2.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\TMP3.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\TMP4.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\TMP5.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_APP_APPDOWNLOADURL.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_APP_APPLICATION.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_APP_APPLICATION_VER.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_APP_DEVICE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_APP_NOTIFICATION.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_APP_VER.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_CP_IM_MOBILEVERSION.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_CP_REMIND_EMAIL_RUNTIME.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_CP_REMIND_SMS_RUNTIME.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_CP_UI_CUSTOMERAPP.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_CP_UI_CUSTOMERAPPREFUSER.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_CP_UI_CUSTOMERAPPSHARED.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_CP_UI_CUSTOMERAPPTYPE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_CP_UI_FOLDER.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_CP_UI_FOLDERREFUSER.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_CP_UI_FUNCTIONAGENT.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_CP_UI_PROCESSAGENTFILTER.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_CP_UI_SYSTEMAPP.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_CP_UI_SYSTEMUSERAPPCONTROL.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_CP_UI_SYSTEMUSERDKTCONTROL.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_DB_DB_BAD_TYPE_BAK.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_DB_DB_PART171123.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_DB_DB_PART_BAK.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_CALENDAR_BASE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_CALENDAR_CATEGORY.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_CALENDAR_ESCROW.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_CALENDAR_EVENT.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_CALENDAR_EVENTINFO.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_CALENDAR_MOBILESYNCHRO.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_CALENDAR_SEND.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_CALENDAR_SETTING.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_CALENDAR_VIEWAUTH.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_FORM.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_FORM_BASEDATAQUERYSET.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_FORM_CATEGORY.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_FORM_CODE_DATA_NO.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_FORM_DB.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_FORM_DB_TABLE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_FORM_DB_TABLE_FIELD.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_FORM_DRAF.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_FORM_FILTER_EXP.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_FORM_HISTORY.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_FORM_LANGUAGE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_FORM_RESOURCE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_FORM_RULE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_FORM_RULE_EXECHISTORY.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_FORM_RULE_STEP.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_FORM_RULE_STEP_CONDITION.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_FORM_STEP_EXECHISTORY.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_FORM_TABLE_INFO.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_FORM_TEMPLATE_LIB.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_FORM_TREE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_FORM_USER_QUERY_PLAN.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_FORM_VIEW.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_MD_FIELD.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_MD_FIELD_H.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_MD_INDEX.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_MD_INDEX_H.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_MD_LIMIT.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_MD_LIMIT_H.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_MD_LOG.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_MD_OBJECTPARA.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_MD_OBJECTPARA_H.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_MD_OTHERINFO.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_MD_PROCORFUNC.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_MD_PROCORFUNC_H.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_MD_RELAMANAGER.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_MD_RELAOBJECT.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_MD_RULE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_MD_TABLE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_MD_TABLE_H.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_MD_TABRELATION.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_MD_TABRELATION_H.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_MD_USER_DB.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_MD_VERATTACH.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_MD_VERSION.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_MD_VIEW.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_MD_VIEWFIELD.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_MD_VIEWFIELDRELATION.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_MD_VIEWFIELDRELATION_H.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_MD_VIEWFIELD_H.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_MD_VIEWRELATION.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_MD_VIEWRELATION_H.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_MD_VIEW_H.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_MOBILE_DEV_BINDING.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_RPT_EDIT_HISTORY.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_RPT_EDIT_TEMPLATE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_RPT_TEMPLATE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_RPT_TEMPLATE_CUSTOM.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_ATTACHMENT.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_CATEGORY.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_EMPLOYEE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_EMPLOYEE_18410.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_EMPLOYEE_PD.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_EMPLOYEE_TEMP.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_FILE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_FORM.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_FORM_FIELD.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_FORM_FUNCTION.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_FORM_RECORD.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_LOG.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_MENU.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_ORGANIZATION.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_ORGANIZATION_PD.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_ORG_LEADER.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_ORG_PRIV.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_ROLE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_ROLE_PRIV.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_ROLE_PRIV_TEMP.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_ROLE_TEMP.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_ROLE_USER.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_ROLE_USER_TEMP.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_STATION.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_STATION_LEVEL.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_STATION_USER.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_USER.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_USER1211.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_USER_DESKTOP.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_USER_GROUP.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_USER_GROUP_PRIV.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_USER_GROUP_TEMP.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_USER_GROUP_USER.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_USER_GROUP_USER_TEMP.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_USER_HELP.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_USER_HELP_TYPE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_USER_PD.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_USER_PRIV.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_USER_TEMP.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_SYS_VALUES_LIST.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_ACTIONCONFIG.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_ACTIONIMAGE_CONFIG.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_ACTIONSQL_CONFIG.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_AGENT_PERMISSION.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_ATTACH_PERMISSION.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_AUDITORINTERFACE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_AUTOAUDIT_RUNTIME.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_AUTOAUDIT_RUNTIME_H.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_BAND_MODULE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_BI_AUTOCREATE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_BUSINESSDATA.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_BUSINESSDATA_H.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_CC_MODULE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_CHANGE_PERMISSION.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_CHILD_RUNTIME.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_DOCUMENT.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_ELECSEAL_MODULE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_ELECSEAL_RUNTIME.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_EMAIL_REPLY.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_FILEACCESS.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_FILING_LOG.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_FORMPERMISSION_MODULE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_FORM_STATUS_CONFIG.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_FORM_STATUS_MODULE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_FORM_STATUS_RUNTIME.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_FORM_WF_RELATION.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_FORM_WF_RELATION_H.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_GATHER_NODE_RUNTIME.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_GATHER_RUNTIME.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_JOB.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_LANGUAGECONFIG.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_LOG.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_LOGCONTENT.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_LOGCONTENT_H.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_LOG_H.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_NODE_EXTEND_RUNTIME.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_NODE_EXTEND_RUNTIME_H.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_NODE_RUNTIME.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_NODE_RUNTIME_H.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_PENDING.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_PENDING_FORM.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_PENDING_FORM_H.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_PENDING_H.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_PLATFORM_CONFIG.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_PROCESSAGENT.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_PROCESSIMPORTLOG.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_PROCESSSTATUS_RUNTIME.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_PROCESS_ATTENTION.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_PROCESS_CHILD_MODULE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_PROCESS_ENTITY.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_PROCESS_KIND.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_PROCESS_MODULE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_PROCESS_RUNTIME.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_PROCESS_RUNTIME_H.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_RELATION_MODULE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_REMIND_EMAIL_RUNTIME.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_REMIND_EMAIL_RUN_H.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_REMIND_MODULE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_REMIND_SCHEDULE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_REMIND_SMS_RUNTIME.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_REMIND_SMS_RUNTIME_H.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_RPT_TEMPLATE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_SEALLOG.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_SMS_MO_RUNTIME.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_SMS_RPT_RUNTIME.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_START_RUNTIME.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_STEPPATH_RUNTIME.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_STEPPATH_RUNTIME_H.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_STEP_AGENT_MODULE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_STEP_EXTEND_MODULE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_STEP_FORM_MODULE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_STEP_MODULE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_STEP_ROLLBACK_MODULE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_STEP_ROLLBACK_RUNTIME.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_STEP_ROLLBACK_RUN_H.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_UI_CONFIG.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_UI_MODULE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_EAP_WF_USER_PROCESS_MODULES.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IFR_IQS_BU_DISPATCH_E3S.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IFR_IQS_BU_INVIT_E3S.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IFS_IQS_BU_DISPATCH_ATT_E3S.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IFS_IQS_BU_DISPATCH_E3S.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IFS_IQS_BU_DISPATCH_PART_E3S.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IFS_IQS_BU_INVIT_E3S.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_ACTION_EXPLANATION.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_APPRAISE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_BILL_NO_RECORD.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_CM_COVER_RATIO.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_CM_EFFECT.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_CM_EFFECT_DETAIL.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_DEPT_PP100.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_DEST_CONTACT.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_DLR_INFO.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_DTR.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_FOLLOW_ANSWERS.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_FOLLOW_CLIENT.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_FOLLOW_ITEM.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_FORECAST.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_FORECAST_DEPARTMENT.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_FORECAST_MODEL.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_INVEST_DATE_RANGE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_IQS_SCORE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_ITEM_ANALYSE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_ITEM_JQ_PP100.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_MAINTAIN.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_MONTH_TARGET.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_MONTH_TARGET_SPLIT.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_PP100_RANKING.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_PROCEDURE_STAT.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_RECOVERY_PARTS.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_RECOVERY_REPORTS.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_REPEAT_CLIENT.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_REPLY_ACTION_PLAN.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_REPLY_CM.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_REPLY_VOC.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_TPR_ISSUE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_TPR_ISSUE_DETAIL.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_TPR_LOG.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_TPR_REPLY.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_TPR_VOC.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_YEAR_BASEPOINT.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_YEAR_BASEPOINT_PLIT.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_YEAR_INVEST_PP100.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_YEAR_PP100.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_YEAR_RANK.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_YEAR_TARGET.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_BU_YEAR_TARGET_SPLIT.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_DB_ATTACHMENT.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_DB_DEPT_MAN.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_DB_DUTY_ROLE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_DB_DUTY_ROLE_HIS.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_DB_FAULT_PART.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_DB_INVEST_REPORT.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_DB_INVEST_REPORT_ORA_TMP.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_DB_INVEST_REPORT_TMP.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_DB_INVEST_RPT_F.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_DB_INVEST_RPT_F_D.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_DB_INVEST_SAMPLE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_DB_ITEM_DETAIL_INFO.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_DB_ITEM_DETAIL_INFO_TMP.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_DB_ITEM_INFO.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_DB_ITEM_INFO_TMP.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_DB_ITEM_PFP.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_DB_JQ_COEF.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_DB_PP100.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_DB_PP100_ITEM.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_DB_REPLY_SETTING.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_DB_TCS_MAN.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IQS_TPR_PROGRESS_STATUS.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IR_IQS_DB_INVEST_REPORT.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IR_IQS_DLR_INFO.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IR_IQS_DTR.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IR_IQS_MAINTAIN.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IR_MIS_REPARE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IR_MIS_SALE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_IR_MIS_VECHILE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_MIS_BU_MEASURES_RESUME.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_MIS_BU_REPARE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_MIS_BU_REPARE_HIS.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_MIS_BU_SALE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_MIS_BU_SALE_HIS.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_MIS_BU_VECHILE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_MIS_BU_WARRANTY.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_MIS_BU_WARRANTY_CURSOR.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_MIS_DB_B.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_MIS_DB_CAR_SERIES.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_MIS_DB_CAR_TYPE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_MIS_DB_DUTY.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_MIS_DB_FACTORY_CAR.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_MIS_DB_LOOKUP_TYPE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_MIS_DB_LOOKUP_VALUE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_MIS_DB_PFP_SYS_DISTIN.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_MIS_DB_PROJECT_DETAIL.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_MIS_DB_PROJECT_INFO.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_MIS_DB_REASION_DISTIN_D.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_MIS_DB_REASION_DISTIN_M.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_MIS_DB_STORAGE_RACK.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_MIS_DB_SYS_DISTIN.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_MIS_IR_MEASURES_RESUME.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_PQ_BU_DATAGRID.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_PQ_BU_DATAGRID_COL.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_PQ_BU_REJ_BILL20170524.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_PQ_BU_REJ_JUD_PART_BOX_V1.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_PQ_BU_RPT_EMAIL_BAK.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_PQ_BU_UPLOADFILE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_PQ_BU_UPLOADFILEOPHISTORY.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_PQ_DB_DATA_AUTH_RULE_TEMP.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_PQ_DB_SHOW_COLSUSED.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_PROCESS_PARTNO.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_PROCESS_PARTNO171123.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_PTPQ_TEST.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_SQ_BU_EIGHT_D_RPT0920.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_SQ_BU_SUP_IMP_ALERT_BAK.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_SQ_BU_SUP_IMP_ALERT_BAK1.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_SQ_BU_SUP_IMP_ALERT_D_BAK.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\T_SQ_BU_TRAY_INFO_BAK070510.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V1_Q_QUES.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V1_T_BU_DB_REJ_SAVE_POS.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V1_T_BU_PQ_REJ_JG_APP_PRO.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V1_T_BU_PQ_REJ_JG_APP_U_PART.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V1_T_PQ_BU_BAD_OUT_ATTA.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V1_T_PQ_BU_CHECK_RATE_DATA.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V1_T_PQ_BU_JUD_RATE_DATA.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V1_T_PQ_BU_PROD_GROUP_CM.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V1_T_PQ_BU_PROD_Q_QUES.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V1_T_PQ_BU_REJ_JUD_PART_BOX.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V1_T_PQ_DB_KD_FIVE_PART_REL.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V2_T_BU_PQ_REJ_JG_APP_PRO.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V2_T_PQ_BU_PROD_Q_QUES.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V3_T_BU_PQ_REJ_JG_APP_PRO.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V4_T_BU_PQ_REJ_JG_APP_PRO.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V5_T_BU_PQ_REJ_JG_APP_PRO.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V6_T_BU_PQ_REJ_JG_APP_PRO.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\VIEW_PQ_CAR_SERIES_NAME.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_AUD_IMP_LOOKUP_TYPE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_COMP.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_COP_ASSEMBLY.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_COP_AUD_RECORD.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_COP_AUTHENTICATION_METHOD.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_COP_CHECK_STATUS.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_COP_CONTROL_LIST_SEARCH_WAY.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_COP_COP_DATA_S_TYPE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_COP_COP_DATA_TYPE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_COP_COP_DETAIL.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_COP_COP_DETAIL_TYPE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_COP_COP_MESSAGE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_COP_CTRL_MODEL_STATUS.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_COP_DB_AUD_RECORD_INFO.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_COP_DUTY_SEC_EMP_USER.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_COP_ENABLE_OR_DISABLE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_COP_IMPROVE_DEPT.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_COP_IMPROVE_RPT.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_COP_IMP_DISP_PROG_ANNEX_TYPE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_COP_ITEM.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_COP_KEY_PART_SEARCH_WAY.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_COP_LOOKUP_TYPE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_COP_LOOKUP_VALUE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_COP_MANAGE_TYPE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_COP_PART_CARTYPE_REL.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_COP_PART_C_M_S_CODE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_COP_PART_SUPP_REL.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_COP_PART_TYPE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_COP_REASON_LEVEL_PDCA.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_COP_REASON_LEVEL_STAN.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_COP_SUPPLY_TYPE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_COP_USED_UNION_STAN.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_DB_CAR_BRAND.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_DB_CAR_SERIES.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_DB_CAR_TYPES.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_DB_CAR_TYPE_INTERN.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_DB_FACTORY.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_DB_YES_OR_NO.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_IQS_BU_DISPATCH_E3S.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_IQS_BU_INVIT_E3S.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_IQS_BU_TPR_ISSUE_DETAIL.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_IQS_FOLLOW_UP.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_IQS_PP100ITEMDETAIL.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_IQS_PP100REPORT.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_IQS_TPR_PROGRESS_STATUS.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_ITEM_DETAIL.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_PQ_BAD_REASON.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_PQ_BRAND.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_PQ_LOGISTICS_STATUS.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_PQ_REJ_DEFECT_QUES_ADD.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_PTPQ_APPROVAL_STATUS.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_PTPQ_ASSECUSTOMINQUIRE01.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_PTPQ_ASSECUSTOMINQUIRE02.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_PTPQ_ASSECUSTOMINQUIRE03.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_PTPQ_ASSECUSTOMINQUIRE04.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_PTPQ_ASSECUSTOMINQUIRE05.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_PTPQ_BAD_BIG_TYPE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_PTPQ_BAD_SMALL_TYPE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_PTPQ_BAD_TYPE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_PTPQ_DB_PART_INFO.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_PTPQ_ENGINEER.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_PTPQ_EQUIP.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_PTPQ_LOOKUP_VALUE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_PTPQ_OUT_PART_TYPE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_PTPQ_PART_SOURCE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_PTPQ_PART_TYPE_USER.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_PTPQ_PRO_LINE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_PTPQ_PRO_LINE_D.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_PTPQ_PRO_LINE_D_INTERFACE.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_PTPQ_PRO_LINE_WORKSHOP.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_SQ_SUPPLIER.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MQCSBUS\V_SUPPLIERS.cs">
+      <DependentUpon>DB_MQCSBUS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\DB_PQ.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_PQ.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\DB_PQ.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\DB_PQ.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_PQ.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_BU_DB_REJ_SAVE_POS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_BU_PQ_MAIL_INFO.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_BU_PQ_REJ_JG_APP_DEFECT.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_BU_PQ_REJ_JG_APP_DEFECT_H.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_BU_PQ_REJ_JG_APP_DUTY.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_BU_PQ_REJ_JG_APP_DUTY_H.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_BU_PQ_REJ_JG_APP_FEE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_BU_PQ_REJ_JG_APP_FEE_H.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_BU_PQ_REJ_JG_APP_PRO.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_BU_PQ_REJ_JG_APP_PRO_H.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_BU_PQ_REJ_JG_APP_U_PART.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_BU_PQ_REJ_JG_APP_U_PART_H.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_DB_DB_BAD_TYPE_180603.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_DB_DB_BAD_TYPE_TEMP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_DB_DB_EQUIP_180603.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_DB_DB_EQUIP_TEMP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_DB_DB_IP_INFO_CSR.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_DB_DB_LOOKUP_VALUE_180603.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_DB_DB_LOOKUP_VALUE_TEMP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_DB_DB_LOOKUP_VALUE_TEMP2.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_DB_DB_PART_180603.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_DB_DB_PRO_LINE_D_180603.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_DB_DB_PRO_LINE_TEMP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_EAP_SYS_EMPLOYEE_180603.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_EAP_SYS_ROLE_PRIV_180603.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_EAP_SYS_ROLE_USER_180603.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_EAP_USER_GROUP_USER_180603.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BA_MEAS_USER.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_ACTUAL.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_ADH_CHECK.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_AL_RESULT_TBL.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_APPEAL_CALENDAR.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_APPEAL_ORDER.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_APPEAL_PROCESS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_APPEAL_TYPE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_APP_TYPE_REJ_BILL.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_ARBITRATION_TYPE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_ASSEMBLY_ML.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_ASSE_BAT_MANA.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_ASSE_COOL_ML.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_ASSE_CY_S_ML.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_ASSE_MEAS_LEAK.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_ASSE_QA_MANA.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_ASSE_VIS_INSP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_AVES_EVAL_D.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_AVES_EVAL_M.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_BAD_DATA.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_BAD_OUT_ATTA.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_BAD_OUT_ATTA_DL.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_BAD_SEND.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_BALE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_BARCODE_SCAN_RATE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_BAT_OBD_CHECK.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_BK_RESULT_TBL.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_BLANK_BAR_2D.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_BLANK_BAR_TMP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_BUILD_PREC_MEAS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_BUILD_PREC_MEAS_D.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CAMSHAFT_MID_MAC.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CAMSHAFT_PROC.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CAM_P_MEAS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CAM_P_MEAS_TEMP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CAR_CHRO_CHECK.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CAR_OUT.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CAR_PART.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CAR_PER_CHECK.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CAR_PROD_PLAN_IMP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CAR_PROD_PLAN_M.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CAST_BAT_DATA.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CHECK_ADV_CALENDAR.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CHECK_JUG_TAR.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CHECK_RATE_DATA.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CHECK_REPORT.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CHECK_REPORT_CASE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CHECK_TOOL_MEAS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CHECK_TOOL_MEAS_D.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CHRO_CHECK_E.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CHRO_CHECK_V.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CLAIM_AMT_D.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CLAIM_AMT_TOT.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CLAIM_PROG_BOARD.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_COLLAPSE_MEAS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_COLLAPSE_MEAS_CONF.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_COLLAPSE_MEAS_REP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_COMB_COLOR_MEAS_D.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_COMB_COLOR_MEAS_M.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CONN_ROD_PROC.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CONTRACT.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CP_MEASURE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CRANKSHAFT_PROC.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CS_HOLES_D.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CS_HOLE_C.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CS_HOLE_E.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CS_HOLE_E_ZZ.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CS_MEAS_MAC.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CS_MEAS_MAC_INFO.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CS_OP165ZZ_MEAS_MAC.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CS_OP165_MAC.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CS_OP210K1_MAC.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CS_OP230ZZ_MEAS_MAC.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CS_P_MEAS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CS_P_MEAS_TEMP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CS_P_MEAS_TMP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CYLINDER_B_PROC.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CYLINDER_S_PROC.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CY_B_FINAL_APPE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CY_B_FIRST_APPE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CY_B_PRE_LEAK.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CY_B_SHELL_OFF.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CY_HOLE_C.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CY_S_FINAL_APPE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CY_S_FIRST_APPE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CY_S_QP_PRESS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CY_S_QP_PRESS_BAK.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CY_S_SHELL_OFF.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_CY_S_TIGHT.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_DAY_AUTO_PERF.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_DEFECT_QUES.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_DEFECT_QUES_BAK.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_DEFECT_QUES_BAK_0422.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_DEFECT_QUES_LOG.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_DEFECT_QUES_REPAIR.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_DEFECT_STAN_MAP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_DOOR_CLOSE_MEAS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_DPU_BAD_CHECK.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_EMPTY_CARPORT.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_EM_RESULT_TBL.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_ENGINE_ASSEMBLE_BAD.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_ENGINE_BAD_CV.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_ENGINE_FORGE_BAD.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_ENGINE_FOUNDRY_BAD.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_ENGINE_PROCESS_BAD.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_EQUIP_CHECK_E.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_EQUIP_CHECK_V.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_EQUIP_MEASURE_E_V.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_EQUIP_MEASURE_M_E.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_EQUIP_MEASURE_M_V.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_EQUIP_MEASURE_S_V.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_EVAL_QUES_INFO.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_E_ASSE_BAT.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_E_ASSE_BAT_PART.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_E_ASSE_BAT_PART_TEMP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_E_ASSE_BAT_TEMP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_FINE_HOLE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_FIREBOX_HEIGHT.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_FLOOR_VIB_MEAS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_FMEA_DATA.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_FORGE_BAT_DATA.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_FSC_MSD.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_FX_DISPLAY_SET.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_FX_EMP_DEFAULTACCESS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_FX_EMP_RW_RS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_FX_KEYVALUE_INFO.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_FX_LIST.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_FX_LIST_D.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_FX_OPERATIONLOG.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_FX_RFID_CAR_PAS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_FX_SENDEMAIL_SET.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_FX_SET.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_GEAR_ASSE_QA.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_GEAR_ASSE_QA_PART.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_GEAR_PART.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_GEAR_PART_P.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_HARD_CHECK.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_HD2_MAIL_M.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_HD2_MAIL_M_HIS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_HT_RESULT_TBL.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_HZ_MEAS_IMP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_INCH_MEASURE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_INNER_GAP_MEAS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_INNER_GAP_MEAS_D.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_INSERT_TEMP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_INSTALL_BAD.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_INSUR_REGI.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_INSUR_REGI_OP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_INSUR_REJ_BILL.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_INSUR_SUP_INDEM.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_INVERTED_BOX_DATA.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_IP_CHECK.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_JUD_RATE_DATA.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_LCS_ON_OFF.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_LOCK_CAR.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_LOG_PRICE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_MAIL_ATTA.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_MAIL_RECORD.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_MANAGE_PROJECT.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_MARKET_PROD.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_MARKET_PROD_MON.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_MATERIAL.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_MATERIAL_CHECK.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_MATERIAL_PRICE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_MATERIAL_PRICE_HIS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_MATE_PRICE_MAINT.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_MEASURE_RESULT.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_MEASURE_RESULT_HIS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_MEASURE_TMP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_MEAS_MOLD_D.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_MEAS_MOLD_M.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_MEAS_RESULT_D.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_MEAS_RESULT_M.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_MID_TL_HIS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_MOMENT_MEASURE_E.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_MOMENT_MEASURE_V.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_MONITOR_PROBLEM.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_PAINT_ADH_CHECK.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_PAINT_BAD.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_PART_POS_R.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_PART_PRO.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_PART_PROCESS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_PART_PROCESS_TEMP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_PART_PROJ.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_PART_PROJ_TEMP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_PER_CHECK.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_POINT_IMP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_PRE_SAND_CHECK.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_PROCESS_CHECK.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_PROCESS_CLAIM.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_PRODUCE_DATA_ANA.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_PRODUCT_ACTU.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_PRODUCT_PLAN.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_PROD_GROUP_CM.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_PROD_Q_QUES.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_PROJECT_CS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_PTLOG_APPLICATION.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_PT_MEASURE_D.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_PT_MEASURE_IMP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_PT_MEASURE_M.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_PUNCH_BAD.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_QIC_EXCE_ATTA.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_QIC_EXCE_D_CTM.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_QIC_EXCE_D_HCFM.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_QIC_EXCE_EXP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_QIC_EXCE_EXP_20160826.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_QIC_EXCE_M.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_QIC_EXCE_M_530.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_QIC_IMPROVE_CASE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_QIC_IMPROVE_ITEM.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_QIC_TREND.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_QIC_TREND_IMP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_QUALITY_CHECK_E.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_QUALITY_CHECK_V.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_QUALITY_INDEX.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_QUALITY_INDEX_IMP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_QUALITY_MONS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_QUES_LIB.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_QVCC_SPEC.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_RAW_MAT_SUP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_REJ_BILL.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_REJ_BILL_DEFECT_QUES.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_REJ_BILL_DEFECT_QUES_H.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_REJ_BILL_DUTY_COMP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_REJ_BILL_DUTY_COMP_HIS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_REJ_BILL_HIS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_REJ_BILL_OP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_REJ_BILL_OTHER_FEE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_REJ_BILL_OTHER_FEE_HIS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_REJ_BILL_PART.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_REJ_BILL_PART_HIS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_REJ_BILL_PART_TEMP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_REJ_BILL_RAW_MAT.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_REJ_BILL_RAW_MAT_HIS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_REJ_DUTY_CHAN.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_REJ_JUD_PART_BOX.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_REJ_JUD_PART_BOX_H.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_REPAIR_D_E.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_REPAIR_D_V.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_REPAIR_M_E.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_REPAIR_M_V.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_RESIN_BAD.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_RE_OTHER_FEE_TEMP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_RPT_EMAIL.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_RPT_EMAIL_HIS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_RSATTACHMENT.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_RSCM_APPL.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_RSPROJECT_CODE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_RSPROJECT_INFO.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_RSRELPROJECT.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_R_MATERIAL_CHECK.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_SC_CLOSE_MEAS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_SEND_PART_M.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_SIZE_CHECK.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_SOLDER_BAD.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_SPECTRAL_CHECK.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_SP_RESULT_TBL.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_SS_RESULT_TBL.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_STEER_WHEEL_MEAS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_STEER_WHEEL_OSC_MEAS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_STEER_WHEEL_VIB_MEAS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_STOCK_STATUS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_SUPPLIER_FB_ANS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_SUP_QA_R.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_SURFACE_CHECK_E.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_SURFACE_CHECK_V.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_SURF_VIBR_CHECK.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_S_COLOR_DIFF_D.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_S_COLOR_DIFF_M.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_TAS_CHECK.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_TATGET.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_TATGET_ACTUAL.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_TATGET_IMP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_TEAM_BAD_DESC_REL.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_TES_D_EVAL.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_TES_S_DETAIL.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_TES_S_EVAL.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_THICK_MEASURE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_THR_D_MEASURE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_THR_D_MEASURE_D.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_TIGHT_INFO.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_TIGHT_INFO_HIST.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_TIRE_RFV_MEAS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_TIRE_UNIFORMITY.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_TORQUE_DATA.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_TORQUE_DATA_0517.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_TRACE_BACK.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_TRAN_ASSEMBLE_BAD.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_TRAN_PROCESS_BAD.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_TU_RESULT_TBL.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_TV_RULE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_UCF_CHECK.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_UCF_MEASURE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_UCF_MEASURE_D.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_VACUUM_FILL_ANTIF.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_VACUUM_FILL_BRAKE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_VACUUM_FILL_COLD.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_VE_BAD_INFO.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_V_BUILD_PREC.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_V_BUILD_PREC_D.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_V_BUILD_PREC_TMP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_V_DEVI_WEAR.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_V_RUN_DEVI_MEAS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_WARN.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_WARNING_DEAL.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_WARNING_INFO.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_WARNING_PLAN.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_WARNING_RULE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_WARNING_RULE_CV.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_WATERTIGHT_CHECK.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_BU_WIPER_ATTACK_MEAS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_ALERT_BAD_DESC.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_ALERT_RULE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_ALERT_STATION_USER.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_ATTR_CHOICE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_BAD_MODI_MANA.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_BARCHART_CONFIGURE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_BA_COLOR_DIFF_SPEC.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_BA_OTHER_MEAS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_BA_PART_MEAS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_BA_PART_POS_R.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_BA_POINT_MEAS.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_BA_QUALITY_INDEX.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_BA_QUALITY_INDEX_IMP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_BA_QVCC_POINT.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_BODY_PREC_INDEX.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_BU_VIN_CARTYPE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_CS_FUNTION.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_CTCEIGT_REAL.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_DATA_AUTH_RULE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_DEFECT_STAN_BAD_G.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_DEFECT_STAN_QUICK.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_DEFECT_STAN_RELA.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_DETAIL_BAD_GROUP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_DUTY_DEPT.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_ENGINE_TYPE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_IF_RESO_CONFI.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_KD_FIVE_PART_REL.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_KD_INSUR_SERIAL_NO.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_LEAKAGE_RULE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_MAIL_SEND_ROLE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_MOLD.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_PAINT_CHECK_ITEM.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_PART_POS_PIC_D.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_PART_POS_PIC_M.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_PART_SUP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_PROCESS_PARAM.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_PROC_MEAS_ITEM.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_PROC_MEAS_ITEM_180603.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_PROC_WASTE_UPPER.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_PRT_CLD_REL.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_PT_BILL_SEQ.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_PT_SPEC.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_PT_SPEC_IMP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_QIC_ORGANIZATION.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_QIC_PERFORM_INDEX.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_QIC_USER.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_QIC_USERROLE_RLT.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_REJ_BILL_GEN.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_REJ_NO_GEN.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_REMIND_NOTICE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_RESO_RULE_2D.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_ROLE_BAD_GROUP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_ROLE_ONLINE_PRIVILEGE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_ROLE_WORK.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_RPT_REC_SET.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_RULE_DEFI_2D.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_SAO_PART.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_SAVE_POS_PER.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_SCRAP_BAD_TYPE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_SHOW_COLSUSED.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_TAR_VAL_D.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_TAR_VAL_IMP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_TAR_VAL_M.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_USER_CHOICE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_USER_FACTORY.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_USER_PRIVILEGE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_USER_WORKSHOP.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_VESV3_TEMP2.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_WARE_RFID_ALERT.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_WARE_RFID_IPC.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_WARE_RFID_READER.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_WARNING_BAD_REASON.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_WARNING_CONDITION.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_WARNING_INFO.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_WARNING_LEVEL.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_DB_WORK_BASE_PAR.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\T_PQ_TD_COLDATA.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\V1_T_PQ_BU_BAD_OUT_ATTA.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\V1_T_PQ_BU_CHECK_RATE_DATA.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\V2_T_PQ_BU_CHECK_RATE_DATA.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\V_DL_CLJF_DATA.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\V_HD2_3D_DATA.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\V_HD2_JF_DATA.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\V_HD2_JJ_DATA.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\V_HD2_NJX_DATA.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\V_HD2_PART_POINT.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\V_HD2_UCF_DATA.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\V_HD2_VES_DATA.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\V_PQ_BU_FAC_CAR_TYPE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\V_PQ_DB_DEFECT_STAN.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\V_PTPQ_DB_PART_INFO.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PQ\V_PTPQ_PRO_LINE_D_INTERFACE.cs">
+      <DependentUpon>DB_PQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="MQCSBUS\DB_MQCSBUS.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DB_MQCSBUS.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="DB\DB_DB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DB_DB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DB\DB_DB.edmx.diagram">
+      <DependentUpon>DB_DB.edmx</DependentUpon>
+    </None>
+    <None Include="MQCSBUS\DB_MQCSBUS.edmx.diagram">
+      <DependentUpon>DB_MQCSBUS.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <EntityDeploy Include="PQ\DB_PQ.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DB_PQ.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="PQ\DB_PQ.edmx.diagram">
+      <DependentUpon>DB_PQ.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DB\DB_DB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DB_DB.edmx</DependentUpon>
+      <LastGenOutput>DB_DB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DB\DB_DB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DB_DB.edmx</DependentUpon>
+      <LastGenOutput>DB_DB.cs</LastGenOutput>
+    </Content>
+    <Content Include="MQCSBUS\DB_MQCSBUS.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DB_MQCSBUS.edmx</DependentUpon>
+      <LastGenOutput>DB_MQCSBUS.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="MQCSBUS\DB_MQCSBUS.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DB_MQCSBUS.edmx</DependentUpon>
+      <LastGenOutput>DB_MQCSBUS.cs</LastGenOutput>
+    </Content>
+    <Content Include="PQ\DB_PQ.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DB_PQ.edmx</DependentUpon>
+      <LastGenOutput>DB_PQ.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="PQ\DB_PQ.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DB_PQ.edmx</DependentUpon>
+      <LastGenOutput>DB_PQ.cs</LastGenOutput>
+    </Content>
+    <Content Include="说明.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

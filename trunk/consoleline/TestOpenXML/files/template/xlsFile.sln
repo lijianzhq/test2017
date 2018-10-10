@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilesNoChart", "FilesNoChart\FilesNoChart.csproj", "{AEFC7CC0-3955-4EB9-AA66-58F750FE85F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilesWithChart", "FilesWithChart\FilesWithChart.csproj", "{BB0B0F05-4846-4123-B948-873230B5D4AB}"
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = DreamCube.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AEFC7CC0-3955-4EB9-AA66-58F750FE85F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEFC7CC0-3955-4EB9-AA66-58F750FE85F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEFC7CC0-3955-4EB9-AA66-58F750FE85F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEFC7CC0-3955-4EB9-AA66-58F750FE85F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB0B0F05-4846-4123-B948-873230B5D4AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB0B0F05-4846-4123-B948-873230B5D4AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB0B0F05-4846-4123-B948-873230B5D4AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB0B0F05-4846-4123-B948-873230B5D4AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

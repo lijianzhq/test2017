@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../boostrap/bootstrap-3.3.7-dist/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="./search2.css" />
+    <script type="text/javascript" src="../boostrap/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../boostrap/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="plugin.js"></script>
+    <script src="./msger.js"></script>
+    <script src="./search2.js"></script>
+</head>
+
+<body>
+    <div id="msdiv"></div>
+
+    <button class="btn btn-primary" id="btnAlert">弹出Alert</button>
+    <button class="btn btn-primary" id="btnConfirm">弹出Confirm</button>
+    <button class="btn btn-primary" id="btnPromp">弹出Promp</button>
+</body>
+
+</html>
+<script>
+    $(function () {
+        $("#btnAlert").click(function () {
+            $.Msger("alert", "提示", "你错了");
+        });
+        $("#btnConfirm").click(function () {
+            $.Msger("confirm", "提示", "你错了", function (e) {
+                if (!e) {
+                    alert(false);
+                }
+            });
+        });
+        $("#btnPromp").click(function () {
+            $.Msger("promt", "提示", function (e, s) {
+                alert(e + s);
+            });
+        });
+    });
+</script>

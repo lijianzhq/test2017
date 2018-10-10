@@ -1,0 +1,30 @@
+﻿@using TestEFCodeFirst2.Models
+
+@{
+    /**/
+
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        Infos:<br />
+        @{
+            using (var db = new DB())
+            {
+                foreach (var item in db.Donators)
+                {
+                    <div>@String.Format("{0} donate ￥{1}", item.Name, item.Amount)</div>
+                }
+            }
+        }
+    </div>
+</body>
+</html>

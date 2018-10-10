@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="../scripts/knockout-3.4.2.debug.js"></script>
+</head>
+<body>
+    <div>
+        <select data-bind="options:SelectItems,optionsCaption:'please select',value:selectedValue"></select>
+        <input type="button" data-bind="click:showSelectedItem" value="showSelectValue"/>
+    </div>
+
+    <script type="text/javascript">
+        function ViewModel() {
+            var seft = this;
+            seft.selectedValue = ko.observable();
+            seft.SelectItems = ko.observableArray(["no1", "no2"]);
+            seft.showSelectedItem = function () {
+                alert(seft.selectedValue());
+            };
+        };
+        ko.applyBindings(new ViewModel());
+    </script>
+</body>
+</html>
