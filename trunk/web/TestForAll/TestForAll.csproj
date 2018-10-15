@@ -89,6 +89,7 @@
     <Content Include="lib\bootstrap-table\bootstrap-table.js" />
     <Content Include="lib\jquery\jquery-1.4.2.js" />
     <Content Include="lib\jquery\jquery-3.3.1.js" />
+    <Content Include="test1.js" />
     <Content Include="testBoostrapTable\bootstrap-table-examples-master\.gitignore" />
     <Content Include="testBoostrapTable\bootstrap-table-examples-master\.gitmodules" />
     <Content Include="testBoostrapTable\bootstrap-table-examples-master\app.js" />
@@ -1183,6 +1184,9 @@
     <Content Include="testEasyUI\test\test3.htm" />
     <Content Include="testEasyUI\test\testIcons.htm" />
     <Content Include="testEasyUI\test\test_datagrid.htm" />
+    <Content Include="testJSModule\lib.js" />
+    <Content Include="testJSModule\main.html" />
+    <Content Include="testJSModule\main.js" />
     <Content Include="testKnockout\foreach\sample1.html" />
     <Content Include="testKnockout\foreach\sample2.html" />
     <Content Include="testKnockout\index1.html" />
