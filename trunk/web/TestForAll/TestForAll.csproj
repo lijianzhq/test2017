@@ -1187,6 +1187,9 @@
     <Content Include="testJSModule\lib.js" />
     <Content Include="testJSModule\main.html" />
     <Content Include="testJSModule\main.js" />
+    <Content Include="testJS\index.html" />
+    <Content Include="testJS\test_Closure.js" />
+    <Content Include="testJS\test_Promise.js" />
     <Content Include="testKnockout\foreach\sample1.html" />
     <Content Include="testKnockout\foreach\sample2.html" />
     <Content Include="testKnockout\index1.html" />

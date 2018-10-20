@@ -1,0 +1,577 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ED7B5EBE-8013-4120-BAA9-322D534C2615}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>GenerateEntiyForMeiCloud</RootNamespace>
+    <AssemblyName>GenerateEntiyForMeiCloud</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APSDEV.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>APSDEV.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="APSDEV.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="APSDEV.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>APSDEV.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_APPLICATION_B.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_APPLICATION_TL.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_BILLNO_RULE.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_BILLNO_RULE_RECORD.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_CANCEL_LOG.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_COLOR_HEADER.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_COLOR_LINE_B.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_COLOR_LINE_TL.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_CONCURRENT_MANAGERS.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_CONCURRENT_MANAGERS_TL.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_CONCURRENT_MANAGER_RULE.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_CONCURRENT_PROCESSES.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_CONCURRENT_PROGRAMS.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_CONCURRENT_PROGRAMS_TL.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_CONCURRENT_PROGRAM_SERIAL.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_CONCURRENT_REQUESTS.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_CONC_PROG_PARAMETER.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_CONC_PROG_PARAMETER_TL.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_CONC_REQUESTS_CONFLICT.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_CONC_REQUESTS_QUEUE.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_EXECUTABLES.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_FLEX_VALIDATION_TABLES.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_FLEX_VALUE_SETS.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_FUNCTIONS_B.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_FUNCTIONS_TL.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_LNG_DEV.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_LNG_MAPPING.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_LOOKUP_CODE.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_LOOKUP_CODE_DETAIL.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_LOOKUP_TYPES_B.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_LOOKUP_TYPES_TL.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_LOOKUP_VALUES_B.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_LOOKUP_VALUES_TL.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_MENUS_B.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_MENUS_RELATION.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_MENUS_TL.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_MENU_GROUP_B.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_MENU_GROUP_TL.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_MESSAGES_B.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_MESSAGES_TL.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_NODES.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_PARAMETERS_B.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_PARAMETERS_TL.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_PARAMETER_VALUES.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_REQUEST_GROUPS.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_REQUEST_GROUPS_TL.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_REQUEST_GROUP_UNITS.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_REQUEST_SETS.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_REQUEST_SETS_TL.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_REQUEST_SET_PROGRAMS.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_REQUEST_SET_PROG_ARGS.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_REQUEST_SET_RUN_ARGS.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_REQUEST_SET_STAGES.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_RESPS_B.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_RESPS_TL.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_RESP_MENU.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_RESP_REQUEST_GROUP.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_SYSTEM_INFO.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_USERS.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_USER_PREFERENCES.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_USER_RESPS.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BASE_VIRTUAL_LOCK.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PC_APPROVED_VENDOR_LIST.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PC_BUYERS.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PC_DELIVERY_CALENDAR.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PC_DELIVERY_CALENDAR_LINE.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PC_DELIVERY_REGION.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PC_DELIVERY_REGION_SUBINV.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PC_ITEM_CATEGORY_HEAD.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PC_ITEM_CATEGORY_LINE.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PC_MANUAL_DELIVERY_DEMAND.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PC_VENDOR_ALLOCATION_PERCENT.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PI_BOM_COMPONENT.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PI_BOM_STRUCTURE.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PI_BUYER.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PI_CUSTOMER.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PI_DELIVERY_ACCEPT.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PI_DELIVERY_HEADER.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PI_DELIVERY_LINE.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PI_DELIVERY_RECEIVED.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PI_INTERFACE_MSG.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PI_ITEM.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PI_ITEM_CATEGORY.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PI_ITEM_ROUTING.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PI_MAKE_ORDER.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PI_MAKE_ORDER_IN.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PI_MO_COMPLETE_TRAN.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PI_MO_PROCESS_MOVE_TRAN.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PI_MO_PROD_ONLINE.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PI_MO_REQUIREMENT.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PI_MO_REQUIREMENT_IN.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PI_NOTIFY_HEADER.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PI_NOTIFY_LINE.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PI_NOTIFY_STATUS.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PI_ONHAND_QUANTITY.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PI_PLANNER.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PI_PO_HEADER.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PI_PO_LINE.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PI_REQ_ORDERS.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PI_REQ_ORDERS_HIS.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PI_REQ_ORDER_LINE.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PI_RESOURCE.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PI_SUBINVENTORY.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PI_VENDOR.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PI_VENDOR_ALLOCATION_PERCENT.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PI_VENDOR_APPROVED.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PI_VENDOR_SITE.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PP_REQ_CHANGE_HISTORY.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PP_REQ_ORDERS.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PP_REQ_SPLIT_MERGE.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PP_SHARE_DEMAND.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PP_SHARE_PLAN.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PP_SHARE_PLAN_HEADER.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PP_SHARE_SUPPLY.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PP_SHRINKAGE_PLAN.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="PS_ASS_MAKE_ORDER.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_BOM_COMPONENTS.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_BOM_EXPLOSION.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_BOM_STRUCTURES.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_CALENDARS.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_CALENDAR_RESOURCE_SHIFTS.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_CALENDAR_RES_WORK_TIMES.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_CALENDAR_SHIFTS.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_CALENDAR_SHIFT_TEMPLATE.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_CATEGORIES.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_CATEGORY_SETS.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_CUSTOMER.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_ITEM.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_ITEM_CATEGORIES.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_ITEM_CATEGORIES_TMP.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_ITEM_ROUTINGS.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_LEAD_TIME_PRODUCTION.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_MAKE_ORDER.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_MAKE_ORDER_HISTORY.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_MAKE_ORDER_INTERFACE.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_MAKE_ORDER_P.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_MO_EXCEPTION_MSG.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_MO_PUBLISH_VERSION.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_MO_PUBLISH_VERSION_D.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_MO_REQUIREMENT.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_MO_REQUIREMENT_INTERFACE.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_MO_TYPE.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_ONHAND_QUANTITIES.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_PLANNERS.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_PLANT.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_REQ_NONSTD_REQUIREMENT.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_RESOURCE.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_RESOURCE_LINKAGE.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_SCHEDULE_GROUP.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_SCHEDULE_REGION.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_SHIFT_SCHEDULE_DETAIL.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_SHIFT_SCHEDULE_DETAIL_P.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_SUBINVENTORIES.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_USER_PRIVILAGE.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PS_USER_PRIVILAGE_DETAIL.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>APSDEV.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="APSDEV.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>APSDEV.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="App.Config" />
+    <None Include="APSDEV.edmx.diagram">
+      <DependentUpon>APSDEV.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="APSDEV.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>APSDEV.edmx</DependentUpon>
+      <LastGenOutput>APSDEV.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="APSDEV.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>APSDEV.edmx</DependentUpon>
+      <LastGenOutput>APSDEV.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
