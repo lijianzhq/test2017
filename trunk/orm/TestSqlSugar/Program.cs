@@ -12,7 +12,7 @@ namespace TestSqlSugar
         {
             //Test_Insert.Start();
             //Test_Query.Start();
-            //Test_Update.Start();
+            Test_Update.Start();
             //Test_Delete.Start();
 
             Console.Read();
