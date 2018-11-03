@@ -9,5 +9,9 @@ namespace TestAutoMapper
         public string Name { get; set; }
         public List<BookDto> Books { get; set; }
         public AddressDto Address { get; set; }
+
+        public DateTime CreateOn { get; set; }
+
+        public DateTime LastUpdatedOn { get; set; }
     }
 }

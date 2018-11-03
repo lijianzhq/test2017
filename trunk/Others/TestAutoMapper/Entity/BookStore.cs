@@ -12,5 +12,8 @@ namespace TestAutoMapper
         public string Name { get; set; }
         public List<Book> Books { get; set; }
         public Address Address { get; set; }
+
+        public DateTime CreateOn { get; set; }
+        public DateTime LastUpdatedOn { get; set; }
     }
 }

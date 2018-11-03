@@ -1342,7 +1342,10 @@
     <Content Include="testTransfer\test1.aspx" />
     <Content Include="testTransfer\test2.aspx" />
     <Content Include="testTransfer\test3.aspx" />
-    <Content Include="testTypeScript\test.html" />
+    <Content Include="testTypeScript\test1\test.html" />
+    <TypeScriptCompile Include="testTypeScript\test1\test2.ts" />
+    <Content Include="testTypeScript\test1\test3.js" />
+    <Content Include="testTypeScript\testRxJS\test.html" />
     <Content Include="testUrl\test.js" />
     <Content Include="testWebbrowser\index.html" />
     <Content Include="testWebbrowser\index.js" />
@@ -1518,7 +1521,8 @@
     <Folder Include="testBoostrapTable\bootstrap-table-examples-master\assets\multiple-select\" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="testTypeScript\test.tsx" />
+    <TypeScriptCompile Include="testTypeScript\test1\test.tsx" />
+    <TypeScriptCompile Include="testTypeScript\testRxJS\test.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
