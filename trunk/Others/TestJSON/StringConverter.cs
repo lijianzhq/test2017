@@ -5,6 +5,9 @@ using Newtonsoft.Json.Converters;
 
 namespace TestJSON
 {
+    /// <summary>
+    ///  好像行不通，简单类型不能直接用converter（不知道怎么注册到newtonsoft.json里面）
+    /// </summary>
     class StringConverter : CustomCreationConverter<String>
     {
         public override string Create(Type objectType)

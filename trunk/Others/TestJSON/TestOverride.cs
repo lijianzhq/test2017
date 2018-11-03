@@ -14,7 +14,7 @@ namespace TestJSON
         }
     }
 
-    public class ChildObj:ParentObj
+    public class ChildObj : ParentObj
     {
         public new String GetName()
         {
