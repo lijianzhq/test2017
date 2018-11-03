@@ -15,7 +15,7 @@ namespace TestSqlSugar
         {
             /*更新*/
             var data2 = new Student() { Id = 1, Name = "jack" };
-            DBContext2.Db.Updateable(data2).ExecuteCommand();
+            Console.WriteLine(DBContext2.Db.Updateable(data2).ExecuteCommand());
         }
     }
 }

@@ -13,9 +13,13 @@ namespace TestSqlSugar
     {
         public static void Start()
         {
+            var school = new School() { Name = "文武学校" };
+            school = DBContext2.Db.Insertable(school).ExecuteReturnEntity();
+            Console.WriteLine(school.Id);
+
             /*插入*/
-            var data = new Student() { Name = "jack" };
-            DBContext2.Db.Insertable(data).ExecuteCommand();
+            var data = new Student() { Name = "jack", SchoolId = school.Id };
+            Console.WriteLine(DBContext2.Db.Insertable(data).ExecuteCommand());
         }
     }
 }
