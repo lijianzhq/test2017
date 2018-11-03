@@ -87,9 +87,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EFEntities\EFEntities.csproj">
+    <ProjectReference Include="..\TestEFEntities.Model\TestEFEntities.Model.csproj">
       <Project>{20e37eea-2f97-4cae-8bda-4295ea09de7f}</Project>
-      <Name>EFEntities</Name>
+      <Name>TestEFEntities.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

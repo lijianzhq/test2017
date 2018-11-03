@@ -10,7 +10,10 @@ namespace TestSqlSugar
     {
         static void Main(string[] args)
         {
+            Test_Query.Start();
+            Test_Delete.Start();
 
+            Console.Read();
         }
     }
 }

@@ -1,0 +1,1 @@
+﻿测试sqlsugar，数据库可以从官网的github下载。

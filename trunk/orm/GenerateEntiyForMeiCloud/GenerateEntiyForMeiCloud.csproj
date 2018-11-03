@@ -572,6 +572,7 @@
       <DependentUpon>APSDEV.edmx</DependentUpon>
       <LastGenOutput>APSDEV.cs</LastGenOutput>
     </Content>
+    <Content Include="说明.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
