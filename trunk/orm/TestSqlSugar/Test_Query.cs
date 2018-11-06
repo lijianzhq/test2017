@@ -14,7 +14,8 @@ namespace TestSqlSugar
         public static void Start()
         {
             //Test01();
-            Test02();
+            //Test02();
+            Test03();
         }
 
         /// <summary>
@@ -70,6 +71,27 @@ namespace TestSqlSugar
             var stuList = list.Select(it => { it.st.School = it.sc; return it.st; }).ToList();
             Console.WriteLine(stuList[0].School.Name);
             Console.WriteLine(stuList.Where(it => it.School.Id != null).FirstOrDefault().Name);
+        }
+
+        /// <summary>
+        /// mergetable的测试
+        /// </summary>
+        public static void Test03()
+        {
+            var list = DBContext2.Db.Queryable<Student, School>((st, sc) => new object[] {
+                    JoinType.Left,st.SchoolId==sc.Id,
+                })
+                .OrderBy((st, sc) => st.Id)
+                .Select((st, sc) => new
+                {
+                    stID = st.Id,
+                    stName = st.Name,
+                    scName = sc.Name,
+                    scID = sc.Id
+                })
+               .MergeTable()
+               .ToList();
+            Console.WriteLine($"{list[0].stName},{list[0].scName}");
         }
     }
 }
