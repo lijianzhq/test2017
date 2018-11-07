@@ -14,7 +14,7 @@ namespace TestSqlSugar
         public static void Start()
         {
             /*删除*/
-            DBContext2.Db.Deleteable<StudentModel>(1).ExecuteCommand();
+            DBContext2.SqlServerDb.Deleteable<StudentModel>(1).ExecuteCommand();
         }
     }
 }

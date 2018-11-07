@@ -70,6 +70,7 @@
     <Content Include="cat\device.min.js" />
     <Content Include="cat\index.html" />
     <Content Include="cat\script.js" />
+    <Content Include="收集一些网页特效.txt" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

@@ -48,7 +48,7 @@ namespace TestSqlSugar
             //这种情况，model类型的属性字段与数据库的字段没有一一对应的，model类型的字段比数据库字段多的情况
             //第一：model类型的属性字段增加一个SugarColumn(IsIgnore = true);
             //第二：用updatecolumns指定要更新的列，注意：updatecolumns必须要加上wehrecolumns的列
-            var effectRow = DBContext2.Db.Updateable<Student>(stus)
+            var effectRow = DBContext2.SqlServerDb.Updateable<Student>(stus)
                             .UpdateColumns(it => new { it.Name, it.Id })
                             .WhereColumns(it => it.Id)
                             .ExecuteCommand();

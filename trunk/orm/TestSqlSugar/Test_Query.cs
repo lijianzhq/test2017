@@ -33,7 +33,7 @@ namespace TestSqlSugar
             //Console.WriteLine(getByWhere.Count);
 
             var total = 0;
-            var getPage = DBContext2.Db.Queryable<StudentModel>().Where(it => it.Id == 95010).ToPageList(1, 2, ref total);//根据分页查询
+            var getPage = DBContext2.SqlServerDb.Queryable<StudentModel>().Where(it => it.Id == 95010).ToPageList(1, 2, ref total);//根据分页查询
             Console.WriteLine(getPage.Count);
             Console.WriteLine(total);
         }
@@ -63,7 +63,7 @@ namespace TestSqlSugar
         {
             //情况1，如果用leftjoin，没有对应的school对象的时候，stu的school对象也不是空的，也会创建一个school对象的
             //所以，这种情况，通常需要把主键属性列，定义为nullable类型的（可空类型），只有这样才能准确判断是否有关联的对象
-            var list = DBContext2.Db.Queryable<Student, School>((st, sc) => new object[] {
+            var list = DBContext2.SqlServerDb.Queryable<Student, School>((st, sc) => new object[] {
                     JoinType.Left,st.SchoolId==sc.Id,
                 })
              .Select((st, sc) => new { st, sc })
@@ -78,7 +78,7 @@ namespace TestSqlSugar
         /// </summary>
         public static void Test03()
         {
-            var list = DBContext2.Db.Queryable<Student, School>((st, sc) => new object[] {
+            var list = DBContext2.SqlServerDb.Queryable<Student, School>((st, sc) => new object[] {
                     JoinType.Left,st.SchoolId==sc.Id,
                 })
                 .OrderBy((st, sc) => st.Id)
