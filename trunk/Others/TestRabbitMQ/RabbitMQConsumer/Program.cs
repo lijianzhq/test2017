@@ -10,7 +10,9 @@ namespace RabbitMQConsumer
     {
         static void Main(string[] args)
         {
-            Consumer.Receive();
+            //Consumer.Receive();
+            //RpcClient.Start();
+            RpcClient.Start_MutiThread();
         }
     }
 }

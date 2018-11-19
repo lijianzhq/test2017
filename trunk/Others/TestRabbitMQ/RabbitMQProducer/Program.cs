@@ -10,7 +10,9 @@ namespace RabbitMQProducer
     {
         static void Main(string[] args)
         {
-            Producer.Send();
+            //Producer.Send();
+            RpcServer.Start();
+            //Console.ReadLine();
         }
     }
 }

@@ -32,6 +32,10 @@ namespace TestSqlSugar
             //var getByWhere = _db.Queryable<StudentModel>().Where(it => it.Id == 1).ToList();//根据条件查询
             //Console.WriteLine(getByWhere.Count);
 
+            //字段的括号获取方法，例如：[]
+            //DBContext2.SqlServerDb.Queryable<StudentModel>().SqlBuilder.SqlTranslationLeft
+            //(DBContext2.SqlServerDb.DbMaintenance as DbMaintenanceProvider).SqlBuilder
+
             var total = 0;
             var getPage = DBContext2.SqlServerDb.Queryable<StudentModel>().Where(it => it.Id == 95010).ToPageList(1, 2, ref total);//根据分页查询
             Console.WriteLine(getPage.Count);
