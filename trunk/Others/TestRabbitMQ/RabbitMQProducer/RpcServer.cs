@@ -24,7 +24,7 @@ namespace RabbitMQProducer
                     using (var channel = connection.CreateModel())
                     {
                         //创建一个rpc queue
-                        channel.QueueDeclare("test", true, false, false, null);
+                        channel.QueueDeclare("test2", true, false, false, null);
                         SimpleRpcServer rpc = new RpcServer(new Subscription(channel, "test2"));
                         Console.WriteLine("服务端启动成功！！");
                         rpc.MainLoop();
@@ -50,6 +50,7 @@ namespace RabbitMQProducer
             //return base.HandleSimpleCall(isRedelivered, requestProperties, body, out replyProperties);
             var receiveData = Encoding.UTF8.GetString(body);
             Console.WriteLine($"接收到消息{++_msgCount}：{receiveData}");
+            System.Threading.Thread.Sleep(10 * 1000);
             return Encoding.UTF8.GetBytes("接收成功！");
         }
 

@@ -15,19 +15,52 @@ namespace RabbitMQConsumer
             var factory = new ConnectionFactory();
             factory.Uri = new Uri("amqp://guest:guest@127.0.0.1:5672//");
             var conn = factory.CreateConnection();
+            conn.CallbackException += Conn_CallbackException;
+            conn.ConnectionRecoveryError += Conn_ConnectionRecoveryError;
+            Console.WriteLine(conn.IsOpen);
             using (var chanel = conn.CreateModel())
             {
+                chanel.ModelShutdown += Chanel_ModelShutdown;
                 var msgCount = 0;
                 var address = new PublicationAddress(exchangeType: ExchangeType.Direct, exchangeName: string.Empty, routingKey: "test2");
                 var client = new RpcClient(chanel, address);
+                client.TimedOut += Client_TimedOut;
+                client.Disconnected += Client_Disconnected;
+                client.TimeoutMilliseconds = 5000;
                 while (true)
                 {
+                    Console.WriteLine(conn.IsOpen);
                     Console.WriteLine($"请输入要发送的消息：");
                     var inputStr = Console.ReadLine();
                     var rsp = client.Call(Encoding.UTF8.GetBytes(inputStr));
                     Console.WriteLine($"返回消息{++msgCount}：{Encoding.UTF8.GetString(rsp)}");
                 }
             }
+        }
+
+        private static void Client_Disconnected(object sender, EventArgs e)
+        {
+            Console.WriteLine("Client_Disconnected");
+        }
+
+        private static void Client_TimedOut(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void Chanel_ModelShutdown(object sender, ShutdownEventArgs e)
+        {
+            Console.WriteLine(e.ReplyText);
+        }
+
+        private static void Conn_ConnectionRecoveryError(object sender, RabbitMQ.Client.Events.ConnectionRecoveryErrorEventArgs e)
+        {
+            Console.WriteLine(e.Exception.Message);
+        }
+
+        private static void Conn_CallbackException(object sender, RabbitMQ.Client.Events.CallbackExceptionEventArgs e)
+        {
+            Console.WriteLine(e.Exception.Message);
         }
 
         /// <summary>

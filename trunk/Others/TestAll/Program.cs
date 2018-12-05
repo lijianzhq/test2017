@@ -12,7 +12,12 @@ namespace TestAll
         static void Main(string[] args)
         {
             //TestFloatDouble.Start();
-            TestTask.Start();
+            //TestTask.Start();
+
+            //TestAction.Start();
+            //TestCollection.Start();
+
+            TestInterlocked.Start();
 
             Console.WriteLine("end");
             Console.Read();
