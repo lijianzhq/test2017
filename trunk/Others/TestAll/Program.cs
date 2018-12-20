@@ -17,7 +17,10 @@ namespace TestAll
             //TestAction.Start();
             //TestCollection.Start();
 
-            TestInterlocked.Start();
+            //TestInterlocked.Start();
+            //TestEncoding.Start();
+
+            TestComparer.Start();
 
             Console.WriteLine("end");
             Console.Read();

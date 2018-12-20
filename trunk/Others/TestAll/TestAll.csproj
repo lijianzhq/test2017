@@ -48,6 +48,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestAction.cs" />
     <Compile Include="TestCollection.cs" />
+    <Compile Include="TestComparer.cs" />
+    <Compile Include="TestEncoding.cs" />
     <Compile Include="TestFloatDouble.cs" />
     <Compile Include="TestInterlocked.cs" />
     <Compile Include="TestTask.cs" />
