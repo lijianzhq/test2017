@@ -12,7 +12,7 @@ namespace TestAll
         static void Main(string[] args)
         {
             //TestFloatDouble.Start();
-            //TestTask.Start();
+            TestTask.Start();
 
             //TestAction.Start();
             //TestCollection.Start();
@@ -20,10 +20,18 @@ namespace TestAll
             //TestInterlocked.Start();
             //TestEncoding.Start();
 
-            TestComparer.Start();
+            //TestComparer.Start();
+
+            //var i = 1;
+            //Show(i++);
 
             Console.WriteLine("end");
             Console.Read();
+        }
+
+        static void Show(Int32 index)
+        {
+            Console.WriteLine(index);
         }
     }
 }
