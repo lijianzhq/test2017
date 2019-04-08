@@ -14,11 +14,17 @@ namespace TestString
             //TestIndexOf();
             //TestRegex.Test();
             //TestFor();
+            //TestAddChar();
+
+            Console.WriteLine("done");
+            Console.Read();
+        }
+
+        public static void TestAddChar()
+        {
             var str = @"Json格式为：
                         jjjjj";
             AddCharAtRowFirst(str);
-            Console.WriteLine("done");
-            Console.Read();
         }
 
         public static StringBuilder AddCharAtRowFirst(String text)

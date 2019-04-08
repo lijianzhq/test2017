@@ -11,67 +11,67 @@ namespace TestDapper
 {
     using System;
     using System.Collections.Generic;
-    
-    
+
+
     /// <summary>
     ///T_Eap_Sys_Role
     /// </summary>
     public partial class T_EAP_SYS_ROLE
     {
-        
-    /// <summary>
-    ///角色ID
-    /// </summary>
-    public string ROLE_ID { get; set; }
-        
-    /// <summary>
-    ///角色编号
-    /// </summary>
-    public string ROLE_CODE { get; set; }
-        
-    /// <summary>
-    ///角色名称
-    /// </summary>
-    public string ROLE_NAME { get; set; }
-        
-    /// <summary>
-    ///所属组织
-    /// </summary>
-    public string ORG_ID { get; set; }
-        
-    /// <summary>
-    ///角色说明
-    /// </summary>
-    public string ROLE_DESC { get; set; }
-        
-    /// <summary>
-    ///是否可用
-    /// </summary>
-    public decimal ENABLED { get; set; }
-        
-    /// <summary>
-    ///是否内置
-    /// </summary>
-    public decimal BUILT_IN { get; set; }
-        
-    /// <summary>
-    ///创建人
-    /// </summary>
-    public string CREATED_BY { get; set; }
-        
-    /// <summary>
-    ///创建时间
-    /// </summary>
-    public System.DateTime CREATED_TIME { get; set; }
-        
-    /// <summary>
-    ///最后修改人
-    /// </summary>
-    public string LAST_UPDATED_BY { get; set; }
-        
-    /// <summary>
-    ///最后修改时间
-    /// </summary>
-    public System.DateTime LAST_UPDATED_TIME { get; set; }
+
+        /// <summary>
+        ///角色ID
+        /// </summary>
+        public string ROLE_ID { get; set; }
+
+        /// <summary>
+        ///角色编号
+        /// </summary>
+        public string ROLE_CODE { get; set; }
+
+        /// <summary>
+        ///角色名称
+        /// </summary>
+        public string ROLE_NAME { get; set; }
+
+        /// <summary>
+        ///所属组织
+        /// </summary>
+        public string ORG_ID { get; set; }
+
+        /// <summary>
+        ///角色说明
+        /// </summary>
+        public string ROLE_DESC { get; set; }
+
+        /// <summary>
+        ///是否可用
+        /// </summary>
+        public decimal ENABLED { get; set; }
+
+        /// <summary>
+        ///是否内置
+        /// </summary>
+        public decimal BUILT_IN { get; set; }
+
+        /// <summary>
+        ///创建人
+        /// </summary>
+        public string CREATED_BY { get; set; }
+
+        /// <summary>
+        ///创建时间
+        /// </summary>
+        public System.DateTime CREATED_TIME { get; set; }
+
+        /// <summary>
+        ///最后修改人
+        /// </summary>
+        public string LAST_UPDATED_BY { get; set; }
+
+        /// <summary>
+        ///最后修改时间
+        /// </summary>
+        public System.DateTime LAST_UPDATED_TIME { get; set; }
     }
 }

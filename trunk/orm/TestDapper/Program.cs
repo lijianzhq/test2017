@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
-using System.Data.OracleClient;
+//using System.Data.OracleClient;
+using Oracle.ManagedDataAccess.Client;
 
 using Dapper;
 
@@ -16,7 +17,9 @@ namespace TestDapper
     {
         static void Main(string[] args)
         {
-            Test();
+            //Test();
+            //Test2();
+            Test3();
 
             Console.WriteLine("done");
             Console.Read();
@@ -36,9 +39,37 @@ namespace TestDapper
             }
         }
 
+        static void Test2()
+        {
+            using (var conn = GetConnection())
+            {
+                var role = conn.Query<Student>("select * from STUDENT").FirstOrDefault();
+                Console.WriteLine($"{role?.Name},{role?.TestCount}");
+            }
+        }
+
+        static void Test3()
+        {
+            using (var conn = GetConnection())
+            {
+                var cmd = conn.CreateCommand() as OracleCommand;
+                cmd.CommandText = "select * from student";
+                cmd.CommandType = CommandType.Text;
+                cmd.Connection = conn as OracleConnection;
+
+                var adapter = new OracleDataAdapter();
+                adapter.SelectCommand = cmd;
+                var dataSet = new DataSet();
+                adapter.Fill(dataSet);
+                var table = dataSet.Tables[0];
+                Console.WriteLine(table.Rows.Count);
+            }
+        }
+
         static DbConnection GetConnection()
         {
-            return new OracleConnection("DATA SOURCE=172.26.136.162:1521/KFMQCS;PASSWORD=MQCSBUS;PERSIST SECURITY INFO=True;USER ID=MQCSBUS");
+            //return new OracleConnection("DATA SOURCE=10.16.40.171:1521/apsweb.midea.com;PASSWORD=aps;PERSIST SECURITY INFO=True;USER ID=aps");
+            return new OracleConnection("Data Source = (DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = 10.16.40.171)(PORT = 1521))(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = apsweb.midea.com))); User Id = aps; Password = aps");
         }
     }
 }

@@ -12,7 +12,7 @@ namespace TestAll
         static void Main(string[] args)
         {
             //TestFloatDouble.Start();
-            TestTask.Start();
+            //TestTask.Start();
 
             //TestAction.Start();
             //TestCollection.Start();
@@ -24,6 +24,9 @@ namespace TestAll
 
             //var i = 1;
             //Show(i++);
+
+            var str = "aaa.bb";
+            Console.WriteLine(str.Substring(str.IndexOf(".")));
 
             Console.WriteLine("end");
             Console.Read();

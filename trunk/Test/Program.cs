@@ -29,7 +29,7 @@ namespace Test
 
             //Console.WriteLine(Encoding.GetEncoding("text/html"));
             //Test1();
-            //collectionTest.TestHashSet.Test();
+            collectionTest.TestHashSet.Test();
             //collectionTest.TestList.Test();
             //TestCreatePath();
             //TestPLZH.Test();
@@ -38,11 +38,10 @@ namespace Test
             //String aa = null;
             //aa.CallExtesion();
 
-            Convert.ToString(DBNull.Value);
-            Convert.ToString(null);
+            //Convert.ToString(DBNull.Value);
+            //Convert.ToString(null);
+            //Console.WriteLine(String.Format("fda", "fdafd"));
             Console.WriteLine("done");
-            Console.WriteLine(String.Format("fda", "fdafd"));
-            //throw new ArgumentNullException("aa","参数不能为空！");
             Console.Read();
         }
 
