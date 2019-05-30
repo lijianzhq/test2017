@@ -25,11 +25,11 @@ namespace Test
             //Console.WriteLine(String.Format(".bbbbb", "aaa"));
             //TestDic.Test();
             //testPolymorphism.Test.Start();
-            //TestLinq.Test();
+            TestLinq.Start();
 
             //Console.WriteLine(Encoding.GetEncoding("text/html"));
             //Test1();
-            collectionTest.TestHashSet.Test();
+            //collectionTest.TestHashSet.Test();
             //collectionTest.TestList.Test();
             //TestCreatePath();
             //TestPLZH.Test();
@@ -41,8 +41,23 @@ namespace Test
             //Convert.ToString(DBNull.Value);
             //Convert.ToString(null);
             //Console.WriteLine(String.Format("fda", "fdafd"));
+
+            //TestArray();
+            //Console.WriteLine("01".TrimStart('0'));
+
+            //TestEnum.Start();
+
             Console.WriteLine("done");
             Console.Read();
+        }
+
+        static void TestArray()
+        {
+            var i = 0;
+            var data = new String[3] { "1", "2", "3" };
+            Console.Write(data[i++]);
+            Console.Write(data[i++]);
+            Console.Write(data[i++]);
         }
 
         static void CallExtesion(this String text)
