@@ -29,7 +29,7 @@ namespace Test.collectionTest
         public static void Test()
         {
             Add();
-            Add2();
+            //Add2();
         }
 
         static void Add()

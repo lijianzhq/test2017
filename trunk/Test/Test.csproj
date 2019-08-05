@@ -129,6 +129,7 @@
   <ItemGroup>
     <Compile Include="collectionTest\TestHashSet.cs" />
     <Compile Include="collectionTest\TestList.cs" />
+    <Compile Include="collectionTest\TestQueue.cs" />
     <Compile Include="ForTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

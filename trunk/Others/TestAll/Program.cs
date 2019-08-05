@@ -25,8 +25,12 @@ namespace TestAll
             //var i = 1;
             //Show(i++);
 
-            var str = "aaa.bb";
-            Console.WriteLine(str.Substring(str.IndexOf(".")));
+            //var str = "aaa.bb";
+            //Console.WriteLine(str.Substring(str.IndexOf(".")));
+
+            //TestCollection.Start();
+
+            TestDataTable.Start();
 
             Console.WriteLine("end");
             Console.Read();

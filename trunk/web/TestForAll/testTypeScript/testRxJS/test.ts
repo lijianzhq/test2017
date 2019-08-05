@@ -1,3 +1,3 @@
-﻿var Rx = require('rxjs/Rx');
+﻿//var Rx = require('rxjs/Rx');
 
-Rx.Observable.of(1, 2, 3); // 等等
+//Rx.Observable.of(1, 2, 3); // 等等

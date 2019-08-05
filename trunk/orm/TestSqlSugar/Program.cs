@@ -10,11 +10,11 @@ namespace TestSqlSugar
     {
         static void Main(string[] args)
         {
-            //Test_Insert.Start();
+            Test_Insert.Start();
             //Test_Query.Start();
             //Test_Update.Start();
             //Test_Delete.Start();
-            Test_Trans.Start();
+            //Test_Trans.Start();
 
             Console.Read();
         }

@@ -1335,9 +1335,11 @@
     <Content Include="testOther\testMediator\test.html" />
     <Content Include="testParams\test.aspx" />
     <Content Include="testParams\test2.aspx" />
+    <Content Include="testPostData.aspx" />
     <Content Include="testRequestSession\login.aspx" />
     <Content Include="testRequestSession\mainPage.aspx" />
     <Content Include="testRequestSession\说明.txt" />
+    <Content Include="testTimeout.aspx" />
     <Content Include="testTransfer\result.aspx" />
     <Content Include="testTransfer\test1.aspx" />
     <Content Include="testTransfer\test2.aspx" />
@@ -1467,6 +1469,13 @@
     <Compile Include="testParams\test2.aspx.designer.cs">
       <DependentUpon>test2.aspx</DependentUpon>
     </Compile>
+    <Compile Include="testPostData.aspx.cs">
+      <DependentUpon>testPostData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testPostData.aspx.designer.cs">
+      <DependentUpon>testPostData.aspx</DependentUpon>
+    </Compile>
     <Compile Include="testRequestSession\login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1480,6 +1489,13 @@
     </Compile>
     <Compile Include="testRequestSession\mainPage.aspx.designer.cs">
       <DependentUpon>mainPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="testTimeout.aspx.cs">
+      <DependentUpon>testTimeout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testTimeout.aspx.designer.cs">
+      <DependentUpon>testTimeout.aspx</DependentUpon>
     </Compile>
     <Compile Include="testTransfer\result.aspx.cs">
       <DependentUpon>result.aspx</DependentUpon>

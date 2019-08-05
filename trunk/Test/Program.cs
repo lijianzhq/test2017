@@ -25,12 +25,13 @@ namespace Test
             //Console.WriteLine(String.Format(".bbbbb", "aaa"));
             //TestDic.Test();
             //testPolymorphism.Test.Start();
-            TestLinq.Start();
+            //TestLinq.Start();
 
             //Console.WriteLine(Encoding.GetEncoding("text/html"));
             //Test1();
             //collectionTest.TestHashSet.Test();
             //collectionTest.TestList.Test();
+            //collectionTest.TestQueue.Start();
             //TestCreatePath();
             //TestPLZH.Test();
             //TestConvert();
@@ -46,6 +47,8 @@ namespace Test
             //Console.WriteLine("01".TrimStart('0'));
 
             //TestEnum.Start();
+
+            TestDatetime.Start();
 
             Console.WriteLine("done");
             Console.Read();
