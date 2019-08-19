@@ -18,7 +18,7 @@ namespace Test
         public static void Test1()
         {
             //var date = new DateTime(1564939477162);
-            Console.WriteLine(convertJavaLongtimeToDatetime(1564939477162));
+            Console.WriteLine(convertJavaLongtimeToDatetime(1565072746074));
         }
 
         public static DateTime convertJavaLongtimeToDatetime(long time_JAVA_Long)

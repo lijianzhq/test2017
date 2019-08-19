@@ -48,7 +48,9 @@ namespace Test
 
             //TestEnum.Start();
 
-            TestDatetime.Start();
+            //TestDatetime.Start();
+
+            var data = -0.000002514038811731m;
 
             Console.WriteLine("done");
             Console.Read();
