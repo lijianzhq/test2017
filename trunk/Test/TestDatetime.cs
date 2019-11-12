@@ -12,7 +12,8 @@ namespace Test
         {
             //DateTime now = DateTime.Now;
             //(now - now.AddYears(1)).TotalMilliseconds 
-            Test1();
+            //Test1();
+            Test2();
         }
 
         public static void Test1()
@@ -21,6 +22,13 @@ namespace Test
             Console.WriteLine(convertJavaLongtimeToDatetime(1565072746074));
         }
 
+        public static void Test2()
+        {
+            var date1 = DateTime.Parse("2019-09-16 20:50:01");
+            var date2 = DateTime.Parse("2019-09-17 00:50:01");
+            Console.WriteLine((date2 - date1).TotalDays);
+            Console.WriteLine((date2 - date1).Days);
+        }
         public static DateTime convertJavaLongtimeToDatetime(long time_JAVA_Long)
         {
             DateTime dt_1970 = new DateTime(1970, 1, 1, 0, 0, 0);        //年月日时分秒

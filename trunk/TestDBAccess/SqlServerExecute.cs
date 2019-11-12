@@ -10,7 +10,7 @@ namespace TestDBAccess
 {
     class SqlServerExecute : Execute
     {
-        public SqlServerExecute(String connectionStr, Int32 execRecordCount) : base(connectionStr, execRecordCount)
+        public SqlServerExecute(String connectionStr, Int32 execRecordCount = 0) : base(connectionStr, execRecordCount)
         { }
 
         protected override DbProviderFactory GetDbProviderFactory()

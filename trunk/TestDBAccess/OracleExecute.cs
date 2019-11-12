@@ -11,12 +11,12 @@ namespace TestDBAccess
 {
     class OracleExecute : Execute
     {
-        public OracleExecute(String connectionStr, Int32 execRecordCount) : base(connectionStr, execRecordCount)
+        public OracleExecute(String connectionStr, Int32 execRecordCount = 0) : base(connectionStr, execRecordCount)
         { }
 
         protected override DbProviderFactory GetDbProviderFactory()
         {
-            return  Oracle.ManagedDataAccess.Client.OracleClientFactory.Instance;
+            return Oracle.ManagedDataAccess.Client.OracleClientFactory.Instance;
         }
     }
 }

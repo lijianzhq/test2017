@@ -30,7 +30,9 @@ namespace TestAll
 
             //TestCollection.Start();
 
-            TestDataTable.Start();
+            //TestDataTable.Start();
+
+            TestLinq.Start();
 
             Console.WriteLine("end");
             Console.Read();

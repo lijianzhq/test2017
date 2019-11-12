@@ -16,13 +16,13 @@ namespace TestDBAccess
         private String _connectionStr = String.Empty;
         private Int32 _execRecordCount = 1;
 
-        public Execute(String connectionStr, Int32 execRecordCount)
+        public Execute(String connectionStr, Int32 execRecordCount = 0)
         {
             this._connectionStr = connectionStr;
             this._execRecordCount = execRecordCount;
         }
 
-        public void Start()
+        public virtual void Start()
         {
             _stopwatch.Start();
             DoStart();
@@ -30,19 +30,33 @@ namespace TestDBAccess
         }
 
         /// <summary>
+        /// 总执行时间
+        /// </summary>
+        /// <returns></returns>
+        public virtual Double TotalSeconds()
+        {
+            return _stopwatch.Elapsed.TotalSeconds;
+        }
+
+        /// <summary>
+        /// 执行sql
+        /// </summary>
+        /// <param name="sql"></param>
+        public virtual Int32 ExecString(String sql)
+        {
+            var command = GetDbCommand(sql);
+            using (var conn = GetDbConnection(this._connectionStr))
+            {
+                command.Connection = conn;
+                return command.ExecuteNonQuery();
+            }
+        }
+
+        /// <summary>
         /// 获取provider
         /// </summary>
         /// <returns></returns>
         protected abstract DbProviderFactory GetDbProviderFactory();
-
-        /// <summary>
-        /// 总执行时间
-        /// </summary>
-        /// <returns></returns>
-        public Double TotalSeconds()
-        {
-            return _stopwatch.Elapsed.TotalSeconds;
-        }
 
         /// <summary>
         /// 获取连接对象

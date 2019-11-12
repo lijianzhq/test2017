@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using Test.collectionTest;
 
 namespace Test
 {
@@ -19,7 +20,7 @@ namespace Test
             //TestExceptionPerformance.Start();
 
             //TestForeachDic.Test1();
-            //TestHttpUtility.Test();
+            TestHttpUtility.Test();
 
             //Console.WriteLine(String.Format("{0}.bbbbb", "aaa"));
             //Console.WriteLine(String.Format(".bbbbb", "aaa"));
@@ -49,9 +50,9 @@ namespace Test
             //TestEnum.Start();
 
             //TestDatetime.Start();
+            //TestList.Test();
 
             var data = -0.000002514038811731m;
-
             Console.WriteLine("done");
             Console.Read();
         }

@@ -53,6 +53,7 @@
     <Compile Include="TestEncoding.cs" />
     <Compile Include="TestFloatDouble.cs" />
     <Compile Include="TestInterlocked.cs" />
+    <Compile Include="TestLinq.cs" />
     <Compile Include="TestTask.cs" />
   </ItemGroup>
   <ItemGroup>

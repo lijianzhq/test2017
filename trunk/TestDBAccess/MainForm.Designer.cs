@@ -91,6 +91,7 @@
             this.label3.Size = new System.Drawing.Size(77, 12);
             this.label3.TabIndex = 5;
             this.label3.Text = "数据库类型：";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // comb_dbType
             // 
@@ -102,6 +103,7 @@
             this.comb_dbType.Name = "comb_dbType";
             this.comb_dbType.Size = new System.Drawing.Size(121, 20);
             this.comb_dbType.TabIndex = 6;
+            this.comb_dbType.SelectedIndexChanged += new System.EventHandler(this.comb_dbType_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -111,6 +113,7 @@
             this.label4.Size = new System.Drawing.Size(77, 12);
             this.label4.TabIndex = 7;
             this.label4.Text = "连接字符串：";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // txt_connectionStr
             // 
@@ -121,6 +124,7 @@
             this.txt_connectionStr.TabIndex = 8;
             this.txt_connectionStr.Text = "Server=LIJIAN42728\\SQLSERVER2014;Database=SqlSugar4XTest;Integrated Security=SSPI" +
     "";
+            this.txt_connectionStr.TextChanged += new System.EventHandler(this.txt_connectionStr_TextChanged);
             // 
             // MainForm
             // 
@@ -136,6 +140,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_msg);
             this.Controls.Add(this.btn_Excute);
+            this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "数据库效率测试工具";
             this.ResumeLayout(false);

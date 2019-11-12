@@ -10,6 +10,11 @@ namespace Test.collectionTest
     {
         public static void Test()
         {
+            Test2();
+        }
+
+        public static void Test1()
+        {
             var listA = new List<String> { "1", "2", "3" };
             var listB = new List<String> { "2", "3", "4" };
             var listC = listA.Except(listB).ToList();
@@ -22,6 +27,13 @@ namespace Test.collectionTest
             {
                 Console.WriteLine(o);
             });
+        }
+
+        public static void Test2()
+        {
+            var data = new List<String>();
+            var data2 = new List<String>();
+            data.AddRange(data2);
         }
     }
 }
