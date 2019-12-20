@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2027
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29609.76
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{1152F05D-1E38-4D39-9AC0-81FBCE4D675B}"
 EndProject
@@ -159,9 +159,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestRedisQueue.Client", "Re
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestRedisQueue.Publisher", "Redis\TestRedisQueue.Publisher\TestRedisQueue.Publisher.csproj", "{D6E1B556-72AD-416F-B906-99258F383181}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFileIO", "Others\TestFileIO\TestFileIO.csproj", "{00CB11D0-3C9B-40D7-8E25-EB0BCF20D28E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestFileIO", "Others\TestFileIO\TestFileIO.csproj", "{00CB11D0-3C9B-40D7-8E25-EB0BCF20D28E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFileIO2", "Others\TestFileIO2\TestFileIO2.csproj", "{E4607F46-66F3-479F-9AFE-EACCD03BC0D8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03-ML", "03-ML", "{814F0E3C-6AD4-48D4-BF65-4102F88FD0C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

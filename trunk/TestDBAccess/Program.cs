@@ -17,7 +17,7 @@ namespace TestDBAccess
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new DataTypeReadTest());
-            Application.Run(new MutilSqlExecTest());
+            Application.Run(new BatchDataInsert());
             //Application.Run(new MainForm());
         }
     }

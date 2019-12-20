@@ -140,12 +140,14 @@
     <Compile Include="TestExceptionPerformance.cs" />
     <Compile Include="TestForeachDic.cs" />
     <Compile Include="TestHttpUtility.cs" />
+    <Compile Include="TestIO.cs" />
     <Compile Include="TestLinq.cs" />
     <Compile Include="TestPLZH.cs" />
     <Compile Include="testPolymorphism\Child.cs" />
     <Compile Include="testPolymorphism\Parent.cs" />
     <Compile Include="testPolymorphism\Test.cs" />
     <Compile Include="TestSemaphore.cs" />
+    <Compile Include="TestString.cs" />
     <Compile Include="Testyield.cs" />
   </ItemGroup>
   <ItemGroup>

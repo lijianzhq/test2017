@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BatchDataInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BatchDataInsert.Designer.cs">
+      <DependentUpon>BatchDataInsert.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataTypeReadTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,9 @@
     <Compile Include="OracleExecute.cs" />
     <Compile Include="SqlServerExecute.cs" />
     <Compile Include="Student.cs" />
+    <EmbeddedResource Include="BatchDataInsert.resx">
+      <DependentUpon>BatchDataInsert.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DataTypeReadTest.resx">
       <DependentUpon>DataTypeReadTest.cs</DependentUpon>
     </EmbeddedResource>

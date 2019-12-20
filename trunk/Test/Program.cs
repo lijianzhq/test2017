@@ -20,7 +20,7 @@ namespace Test
             //TestExceptionPerformance.Start();
 
             //TestForeachDic.Test1();
-            TestHttpUtility.Test();
+            //TestHttpUtility.Test();
 
             //Console.WriteLine(String.Format("{0}.bbbbb", "aaa"));
             //Console.WriteLine(String.Format(".bbbbb", "aaa"));
@@ -51,6 +51,8 @@ namespace Test
 
             //TestDatetime.Start();
             //TestList.Test();
+            //TestIO.Start();
+            //TestString.Start();
 
             var data = -0.000002514038811731m;
             Console.WriteLine("done");
