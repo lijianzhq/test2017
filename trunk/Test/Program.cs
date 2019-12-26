@@ -54,6 +54,9 @@ namespace Test
             //TestIO.Start();
             //TestString.Start();
 
+            TestExpression.Start();
+            TestReflection.Start();
+
             var data = -0.000002514038811731m;
             Console.WriteLine("done");
             Console.Read();
