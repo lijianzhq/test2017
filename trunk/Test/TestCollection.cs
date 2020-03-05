@@ -5,14 +5,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestAll
+namespace Test
 {
     class TestCollection
     {
         public static void Start()
         {
             //Test4();
-            Test5();
+            //Test5();
+            TestOrderBy();
+        }
+
+        /// <summary>
+        /// 测试排序
+        /// </summary>
+        public static void TestOrderBy()
+        {
+            var str = new String[] { "v1.00", "v1.10", "v1.20", "v1.19", "v1.21", "v1.12", "v1.09", "v1.30", "v1.31", "v1.32", "v2.00" };
+            foreach (var item in str.OrderBy(it => it))
+            {
+                Console.WriteLine(item);
+            }
         }
 
         /// <summary>

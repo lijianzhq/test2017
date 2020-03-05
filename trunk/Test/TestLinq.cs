@@ -22,6 +22,9 @@ namespace Test
             Console.WriteLine(keyNameChars.Count());
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public static void TestGroupBy()
         {
             var dataList = new List<TestGroupData>() {
@@ -42,6 +45,41 @@ namespace Test
             var groups = dataList.GroupBy(it => new { birthday = it.Birthday.ToString("yyyy-MM") });
             Console.WriteLine(groups.Count());
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static void Test1()
+        {
+            var data = new List<Student>();
+            data.Add(new Student()
+            {
+                Age = 10,
+                Age2 = 11,
+            });
+            data.Add(new Student()
+            {
+                Age = 10,
+                Age2 = 12,
+            });
+            data.Add(new Student()
+            {
+                Age = 11,
+                Age2 = 10,
+            });
+            foreach (var s in data.OrderBy(it => it.Age).ThenBy(it => it.Age2))
+            {
+                Console.WriteLine($"{s.Age}-{s.Age2}");
+            }
+        }
+
+    }
+
+    public class Student
+    {
+        public Int32 Age { get; set; }
+
+        public Int32 Age2 { get; set; }
     }
 
     public class TestGroupData
