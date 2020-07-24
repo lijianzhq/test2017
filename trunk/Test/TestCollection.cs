@@ -13,7 +13,22 @@ namespace Test
         {
             //Test4();
             //Test5();
-            TestOrderBy();
+            //TestOrderBy();
+            TestExcept();
+        }
+
+        /// <summary>
+        /// 测试互斥集合
+        /// </summary>
+        public static void TestExcept()
+        {
+            var list1 = new List<String>() { "1", "2", "3" };
+            var list2 = new List<String>() { "3" };
+            var list3 = list1.Except(list2);
+            foreach (var item in list3)
+            {
+                Console.WriteLine(item);
+            }
         }
 
         /// <summary>
