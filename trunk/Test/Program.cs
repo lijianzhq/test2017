@@ -58,6 +58,14 @@ namespace Test
             //TestReflection.Start();
             TestCollection.Start();
 
+            //TestTemp.Start();
+            //TestByte.Start();
+
+            //Int32.TryParse("00D1", System.Globalization.NumberStyles.AllowHexSpecifier, null, out Int32 binNum);
+            //Console.WriteLine(binNum);
+
+            //Console.WriteLine(Convert.ToString(43.ToString("x8")));
+            //TestDatetime.Test4();
             var data = -0.000002514038811731m;
             Console.WriteLine("done");
             Console.Read();
