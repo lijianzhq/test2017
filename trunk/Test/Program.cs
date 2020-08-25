@@ -56,7 +56,7 @@ namespace Test
 
             //TestExpression.Start();
             //TestReflection.Start();
-            TestCollection.Start();
+            //TestCollection.Start();
 
             //TestTemp.Start();
             //TestByte.Start();
@@ -66,6 +66,9 @@ namespace Test
 
             //Console.WriteLine(Convert.ToString(43.ToString("x8")));
             //TestDatetime.Test4();
+
+            TestFloatDouble.Start();
+
             var data = -0.000002514038811731m;
             Console.WriteLine("done");
             Console.Read();
