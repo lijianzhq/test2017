@@ -68,6 +68,7 @@ namespace Test
             //TestDatetime.Test4();
 
             TestFloatDouble.Start();
+            //TestIsAssignableFrom.Start();
 
             var data = -0.000002514038811731m;
             Console.WriteLine("done");
