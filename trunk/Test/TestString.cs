@@ -9,13 +9,19 @@ namespace Test
     {
         public static void Start()
         {
-            TestSubString();
+            //TestSubString();
+            Test2();
         }
 
         public static void TestSubString()
         {
             Console.WriteLine("abc".Substring(1));
             Console.WriteLine("abc".Substring(2));
+        }
+
+        public static void Test2()
+        {
+            Console.WriteLine(Convert.ToString("") == Convert.ToString(null).ToString());
         }
     }
 }

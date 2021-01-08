@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
-using Test.collectionTest;
 
 namespace Test
 {
@@ -52,7 +51,7 @@ namespace Test
             //TestDatetime.Start();
             //TestList.Test();
             //TestIO.Start();
-            //TestString.Start();
+            TestString.Start();
 
             //TestExpression.Start();
             //TestReflection.Start();
@@ -67,7 +66,7 @@ namespace Test
             //Console.WriteLine(Convert.ToString(43.ToString("x8")));
             //TestDatetime.Test4();
 
-            TestFloatDouble.Start();
+            //TestFloatDouble.Start();
             //TestIsAssignableFrom.Start();
 
             var data = -0.000002514038811731m;
