@@ -136,6 +136,7 @@
     <Compile Include="TestAction.cs" />
     <Compile Include="TestByte.cs" />
     <Compile Include="TestComparer.cs" />
+    <Compile Include="TestDatetime.cs" />
     <Compile Include="TestDataTable.cs" />
     <Compile Include="TestEncoding.cs" />
     <Compile Include="TestEnum.cs" />

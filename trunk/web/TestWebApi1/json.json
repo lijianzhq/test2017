@@ -1,0 +1,167 @@
+{
+  "StartRowIndex": 0,
+  "IsFirstRowColumnName": true,
+  "PreCheckDataHandler": {
+    "Name": "",
+    "Params": []
+  },
+  "PreSaveDataHandler": {
+    "Name": "",
+    "Params": []
+  },
+  "PostSaveDataHandler": {
+    "Name": "",
+    "Params": []
+  },
+  "RowDataValidateHandler": {
+    "Name": "",
+    "Params": []
+  },
+  //执行add还是执行update的判断逻辑
+  "InsertOrUpdateHandler": {
+    "Name": "ProdLineItemInsertOrUpdateHanlder",
+    "Params": [ "工厂", "物料编码", "计划组", "资源", "工艺版本"]
+  },
+  //需要更新的列
+  "UpdateColumns": [ "RATE_TYPE", "RATE", "PRIORITY", "BATCH_QTY", "SCHEDULE_FLAG", "SELECT_RESOURCE_FLAG", "PLANT_CODE", "ITEM_ID", "SCHEDULE_GROUP_CODE", "RESOURCE_CODE", "TECH_VERSION", "PROCESS_CODE", "LAST_UPDATED_BY", "LAST_UPDATE_DATE" ],
+  //更新的条件列
+  "WhereColumns": [ "PLANT_CODE", "ITEM_ID", "SCHEDULE_GROUP_CODE", "RESOURCE_CODE", "TECH_VERSION"],
+  "MutexColumns": [
+    [ "工厂", "物料编码", "计划组", "资源", "工艺版本" ]
+  ],
+  "Mappers": [
+    {
+      "TableName": "PS_ITEM_ROUTINGS",
+      "ColMappers": [
+        {
+          "DbColName": "PLANT_CODE",
+          "FileColName": "工厂",
+          "DataType": "String",
+          "Formatter": {
+            "Name": "PlantFormatter",
+            "Params": [ "true", "true" ]
+          }
+        },
+        {
+          "DbColName": "ITEM_ID",
+          "FileColName": "物料编码",
+          "DataType": "String",
+          "Formatter": {
+            "Name": "ItemCodeToItemIDFormatter",
+            "Params": [ "true", "工厂" ]
+          }
+        },
+        {
+          "DbColName": "SCHEDULE_GROUP_CODE",
+          "FileColName": "计划组",
+          "DataType": "String",
+          "Formatter": {
+            "Name": "ScheduleGroupFormatter",
+            "Params": [ "true", "工厂", "false" ]
+          }
+        },
+        {
+          "DbColName": "RESOURCE_CODE",
+          "FileColName": "资源",
+          "DataType": "String",
+          "Formatter": {
+            "Name": "ResourceFormatter",
+            "Params": [ "true", "工厂", "计划组", "true" ]
+          }
+        },
+        {
+          "DbColName": "RATE_TYPE",
+          "FileColName": "速率类型",
+          "DataType": "String",
+          "Formatter": {
+            "Name": "LookupMeaningToCodeFormatter",
+            "Params": [ "true", "PS_RATE_TYPE" ]
+          }
+        },
+        {
+          "DbColName": "RATE",
+          "FileColName": "速率",
+          "DataType": "decimal",
+          "Formatter": {
+            "Name": "NumberFormatter",
+            "Params": [ "true", "decimal", "", 0 ]
+          }
+        },
+        {
+          "DbColName": "BATCH_QTY",
+          "FileColName": "批次数量",
+          "DataType": "decimal",
+          "Formatter": {
+            "Name": "NumberFormatter",
+            "Params": [ "false", "decimal", "", 0 ]
+          }
+        },
+        {
+          "DbColName": "PRIORITY",
+          "FileColName": "优先级",
+          "DataType": "int",
+          "Formatter": {
+            "Name": "NumberFormatter",
+            "Params": [ "true", "int", "", 0 ]
+          }
+        },
+        {
+
+          "DbColName": "PROCESS_CODE",
+          "FileColName": "",
+          "DataType": "string",
+          "Formatter": {
+            "Name": "DefaultValueFormatter",
+            "Params": [ "10", "string" ]
+          }
+        },
+        {
+          "DbColName": "SCHEDULE_FLAG",
+          "FileColName": "参与排产标识",
+          "DataType": "String",
+          "Formatter": {
+            "Name": "LookupMeaningToCodeFormatter",
+            "Params": [ "true", "FND_YES_NO" ]
+          }
+        },
+        {
+          "DbColName": "SELECT_RESOURCE_FLAG",
+          "FileColName": "参与选线标识",
+          "DataType": "string",
+          "Formatter": {
+            "Name": "LookupMeaningToCodeFormatter",
+            "Params": [ "true", "FND_YES_NO" ]
+          }
+        },
+        {
+          "DbColName": "TECH_VERSION",
+          "FileColName": "工艺版本",
+          "DataType": "string",
+          "Formatter": {
+            "Name": "LookupMeaningToCodeFormatter",
+            "Params": [ "false", "TECH_VERSION" ]
+          }
+        },
+        {
+          "DbColName": "RESOURCE_TYPE",
+          "FileColName": "",
+          "DataType": "string",
+          "Formatter": {
+            "Name": "ResourceTypFormatter",
+            "Params": [ "true", "工厂", "计划组", "true", "资源" ]
+          }
+        },
+        {
+          "DbColName": "ENABLE_FLAG",
+          "FileColName": "",
+          "DataType": "string",
+          "Formatter": {
+            "Name": "DefaultValueFormatter",
+            "Params": [ "Y", "string" ]
+          }
+        }
+      ]
+    }
+  ]
+
+}

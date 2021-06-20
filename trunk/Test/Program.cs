@@ -51,7 +51,7 @@ namespace Test
             //TestDatetime.Start();
             //TestList.Test();
             //TestIO.Start();
-            TestString.Start();
+            //TestString.Start();
 
             //TestExpression.Start();
             //TestReflection.Start();
@@ -69,7 +69,7 @@ namespace Test
             //TestFloatDouble.Start();
             //TestIsAssignableFrom.Start();
 
-            var data = -0.000002514038811731m;
+            //var data = -0.000002514038811731m;
             Console.WriteLine("done");
             Console.Read();
         }
