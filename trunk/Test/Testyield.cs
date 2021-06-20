@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Test
 {
-    class Testyield
+    class TestYield
     {
         public static void Start()
         {

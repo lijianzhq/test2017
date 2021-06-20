@@ -70,6 +70,7 @@ namespace Test
             //TestIsAssignableFrom.Start();
 
             //var data = -0.000002514038811731m;
+            TestHttpWebRequest.Start();
             Console.WriteLine("done");
             Console.Read();
         }

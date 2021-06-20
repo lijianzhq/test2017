@@ -143,6 +143,7 @@
     <Compile Include="TestExcel.cs" />
     <Compile Include="TestExceptionPerformance.cs" />
     <Compile Include="TestFloatDouble.cs" />
+    <Compile Include="TestHttpWebRequest.cs" />
     <Compile Include="TestInterlocked.cs" />
     <Compile Include="TestReflection.cs" />
     <Compile Include="TestExpression.cs" />
@@ -157,7 +158,7 @@
     <Compile Include="TestString.cs" />
     <Compile Include="TestTask.cs" />
     <Compile Include="TestTemp.cs" />
-    <Compile Include="Testyield.cs" />
+    <Compile Include="TestYield.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
