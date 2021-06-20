@@ -1185,6 +1185,7 @@
     <Content Include="testEasyUI\test\testIcons.htm" />
     <Content Include="testEasyUI\test\test_datagrid.htm" />
     <Content Include="testHttpMethod\testPost.aspx" />
+    <Content Include="testHttps\testHttps1.aspx" />
     <Content Include="testJSModule\lib.js" />
     <Content Include="testJSModule\main.html" />
     <Content Include="testJSModule\main.js" />
@@ -1462,6 +1463,13 @@
     </Compile>
     <Compile Include="testHttpMethod\testPost.aspx.designer.cs">
       <DependentUpon>testPost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="testHttps\testHttps1.aspx.cs">
+      <DependentUpon>testHttps1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testHttps\testHttps1.aspx.designer.cs">
+      <DependentUpon>testHttps1.aspx</DependentUpon>
     </Compile>
     <Compile Include="testParams\test.aspx.cs">
       <DependentUpon>test.aspx</DependentUpon>
